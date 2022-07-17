@@ -1,0 +1,213 @@
+// header
+#header {
+
+  .inner {
+    max-width: 980px;
+    padding: 0 22px;
+    z-index: 2;
+  }
+
+  .group-flex {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 52px;
+      min-width: 1024px;
+      margin-top: 44px;
+      font-size: 12px;
+      z-index: 10;
+      &::before {
+        content: '';
+        margin-left: -490px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 980px;
+        height: 1px;
+        background-color: rgba(0,0,0,0.16);
+        z-index: 1;
+      }
+
+      .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo {
+        a {
+          display: block;
+          color: #000;
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 1.14286;
+          letter-spacing: -0.5px;
+        }
+    }
+    
+    .service-list {
+      display: flex;
+      align-items: center;
+    }
+
+    .service-item {
+      & + .service-item {
+        margin-left: 24px;
+      }
+    }
+
+    .link-service {
+      color: rgba(0, 0, 0, .88);
+      display: block;
+      font-size: 1em;
+      line-height: 22px;
+      &:hover {
+        color: #06c;
+      }
+      &.buy {
+        line-height: 1.33337;
+        font-weight: 400;
+        letter-spacing: -.01em;
+        min-width: 23px;
+        padding: 4px 11px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        border-radius: 980px;
+        background: #0071e3;
+        &:hover {
+          background: #147ce5;
+        }
+      }
+      &.active {
+        color: rgba(0, 0, 0, .56);
+        cursor: default;
+      }
+    }
+  }
+}
+
+#gnb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 44px;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: rgba(0, 0, 0, .8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 10;
+
+  .gnb-list {
+    margin: 0 -8px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gnb-item {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 1;
+    vertical-align: top;
+  }
+
+  .link-gnb {
+    display: block;
+    max-width: 136px;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #fff;
+    opacity: .8;
+    transition: opacity .3s;
+    height: 100%;
+    &:hover {
+      opacity: 1;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-origin: content-box;
+    }
+    &.apple::before {
+      width: 14px;
+      background-image: url("../../../assets/images/icon/gnb_apple.svg");
+      background-size: 14px 44px;
+    }
+    &.store::before {
+      width: 2.5em;
+      max-width: 51px;
+      background-image: url("../../../assets/images/icon/gnb_store.svg");
+    }
+    &.mac::before {
+      width: 1.91667em;
+      max-width: 39.1px;
+      background-image: url("../../../assets/images/icon/gnb_mac.svg");
+    }
+    &.ipad::before{
+      width: 2em;
+      max-width: 40.8px;
+      background-image: url("../../../assets/images/icon/gnb_ipad.svg");
+    }
+    &.iphone::before {
+      width: 3.16667em;
+      max-width: 64.6px;
+      background-image: url("../../../assets/images/icon/gnb_iphone.svg");
+    }
+    &.watch::before {
+      width: 2.91667em;
+      max-width: 59.5px;
+      background-image: url("../../../assets/images/icon/gnb_watch.svg");
+    }
+    &.airpods::before {
+      width: 3.58333em;
+      max-width: 73.1px;
+      background-image: url("../../../assets/images/icon/gnb_airpods.svg");
+    }
+    &.tvhome::before {
+      width: 3.5em;
+      max-width: 71.4px;
+      background-image: url("../../../assets/images/icon/gnb_tvhome.svg");
+    }
+    &.onlyonapple::before {
+      width: 6.66667em;
+      max-width: 136px;
+      background-image: url("../../../assets/images/icon/gnb_onlyonapple.svg");
+    }
+    &.accessories::before {
+      width: 3.33333em;
+      max-width: 68px;
+      background-image: url("../../../assets/images/icon/gnb_accessories.svg");
+    }
+    &.support::before {
+      width: 3.25em;
+      max-width: 66.3px;
+      background-image: url("../../../assets/images/icon/gnb_support.svg");
+    }
+    &.search::before {
+      width: 15px;
+      background-size: 15px 88px;
+      background-position: 0 0;
+      background-image: url("../../../assets/images/icon/gnb_search.svg");
+    }
+    &.cart::before {
+      width: 13px;
+      background-size: 13px 44px;
+      background-image: url("../../../assets/images/icon/gnb_cart.svg");
+    }
+  }
+}
