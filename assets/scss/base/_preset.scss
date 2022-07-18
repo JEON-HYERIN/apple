@@ -1,3 +1,8 @@
+#wrapper {
+  // overflow: hidden;
+  min-width: 320px;
+}
+
 /* skip-nav */
 #skip-nav {
   position: fixed;
@@ -23,11 +28,6 @@
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-
-#wrapper {
-  overflow: hidden;
-  min-width: 320px;
 }
 
 i[class^="ico-"], i[class*="ico-"] {
