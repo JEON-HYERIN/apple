@@ -117,6 +117,102 @@ body { font-family: "SF Pro KR","SF Pro Text","SF Pro Icons","Apple Gothic","HY 
 
 #gnb .link-gnb.cart::before { width: 13px; background-size: 13px 44px; background-image: url("../images/typo/gnb_cart.svg"); }
 
+#footer { position: relative; min-width: 1024px; overflow: hidden; font-size: 12px; line-height: 1.33337; font-weight: 400; letter-spacing: -.01em; background: #f5f5f7; color: #6e6e73; z-index: 1; }
+
+#footer .inner { margin: 0 auto; max-width: 980px; padding: 0 22px; }
+
+#footer .service-area { font-size: 14px; font-weight: 400; line-height: 1.57143; padding-bottom: 56px; border-bottom: 1px solid #d2d2d7; }
+
+#footer .service-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; text-align: center; font-size: 1em; color: #1d1d1f; }
+
+#footer .service-item { margin: 0 auto; padding-top: 56px; position: relative; text-align: center; width: 216px; z-index: 1; }
+
+#footer .link-service { display: block; }
+
+#footer .link-service i[class^="ico"] { width: 100%; height: 56px; background-size: 100% 56px; background-repeat: no-repeat; }
+
+#footer .link-service .ico-ship { background-image: url("../images/icon/ico_ship.svg"); }
+
+#footer .link-service .ico-money { background-image: url("../images/icon/ico_money.svg"); }
+
+#footer .link-service .ico-help { background-image: url("../images/icon/ico_help.svg"); }
+
+#footer .link-service .ico-badge { background-image: url("../images/icon/ico_badge.svg"); }
+
+#footer .link-service .title { display: block; font-size: 19px; font-weight: 600; letter-spacing: .012em; line-height: 1.31579; margin-top: 0.525em; color: #1d1d1f; }
+
+#footer .link-service .desc { margin-top: 0.4em; }
+
+#footer .link-service .more { display: block; margin-top: 0.8em; color: #06c; }
+
+#footer .link-service:hover .more { text-decoration: underline; }
+
+#footer .link-service .material-icons { font-size: inherit; vertical-align: -2px; }
+
+#footer .guide-area { border-bottom: 1px solid #d2d2d7; padding: 17px 0 11px; font-size: 12px; line-height: 1.33337; letter-spacing: 0em; font-weight: 400; color: #6e6e73; }
+
+#footer .guide-area .remark { padding-bottom: 0.8em; }
+
+#footer .guide-area .remark::before { content: '*'; }
+
+#footer .guide-list { list-style-type: decimal; padding: 0 17px; }
+
+#footer .guide-item { padding-bottom: 0.8em; }
+
+#footer .nav-area .now-list { padding: 17px 0; position: relative; z-index: 1; color: #424245; }
+
+#footer .nav-area .now-list::after { content: ''; display: block; clear: both; }
+
+#footer .nav-area .now-item { margin-right: 7px; float: left; padding: 3px 4px 3px 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+#footer .nav-area .now-item.home { padding-top: 0; }
+
+#footer .nav-area .now-item + .now-item::before { content: ''; display: inline-block; width: 8px; height: 18px; background-size: 8px 36px; background-repeat: no-repeat; background-image: url("../images/icon/ico_arrow.svg"); background-position-y: 100%; margin-right: 11px; vertical-align: middle; margin-top: -1px; }
+
+#footer .nav-area .now-item .link-now { display: inline-block; }
+
+#footer .nav-area .now-item .ico-apple { position: relative; width: 14px; height: 18px; background-size: 14px 72px; background-repeat: no-repeat; background-image: url("../images/icon/ico_apple.svg"); background-position-y: -36px; z-index: 2; }
+
+#footer .nav-list-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 12px; line-height: 1.33337; font-weight: 400; }
+
+#footer .group-column { -ms-flex-preferred-size: 25%; flex-basis: 25%; }
+
+#footer .nav-box + .nav-box { padding-top: 24px; }
+
+#footer .nav-box .title { display: block; font-size: 12px; line-height: 1.33337; font-weight: 400; letter-spacing: -.01em; font-weight: 600; margin-right: 20px; margin-bottom: 0.8em; color: #1d1d1f; cursor: default; }
+
+#footer .nav-item + .nav-item { margin-top: 0.8em; }
+
+#footer .link-nav { color: #424245; }
+
+#footer .link-nav:hover { text-decoration: underline; }
+
+#footer .corp-area { padding: 34px 0 21px; }
+
+#footer .corp-area .group-flex1 { margin-bottom: 7px; padding-bottom: 8px; border-bottom: 1px solid #d2d2d7; }
+
+#footer .corp-area .remark a { color: #06c; }
+
+#footer .corp-area .remark a:hover { text-decoration: underline; }
+
+#footer .corp-area .group-flex2::after { content: ''; display: block; clear: both; }
+
+#footer .corp-area .copyright { float: left; margin-right: 30px; margin-top: 5px; }
+
+#footer .corp-area .corp-list { float: left; margin-right: 30px; margin-top: 5px; position: relative; top: -5px; z-index: 1; }
+
+#footer .corp-area .corp-list::after { content: ''; display: block; clear: both; }
+
+#footer .corp-area .corp-item { float: left; border-right: 1px solid #d2d2d7; margin-right: 7px; padding-right: 10px; margin-top: 5px; white-space: nowrap; }
+
+#footer .corp-area .corp-item:last-child { border: none; margin-right: 0; padding: 0; }
+
+#footer .corp-area .link-corp { display: block; color: #424245; }
+
+#footer .corp-area .link-corp:hover { text-decoration: underline; }
+
+#footer .corp-area .link-nation { float: right; }
+
 .sc-product { position: relative; width: 100%; min-height: 100vh; margin-top: -60px; overflow: hidden; background: #fff; z-index: 2; }
 
 .sc-product .inner { width: 90%; }
@@ -159,16 +255,28 @@ body { font-family: "SF Pro KR","SF Pro Text","SF Pro Icons","Apple Gothic","HY 
 
 .sc-design { position: relative; padding-top: 152px; background: #fff; z-index: 2; }
 
-.sc-design .inner { width: 980px; }
+.sc-design .inner { width: 1228px; }
 
 .sc-design .group-title .title-area { font-weight: 600; }
 
-.sc-design .group-title .theme { font-size: 21px; letter-spacing: .011em; line-height: 1.2858; }
+.sc-design .group-title .theme { font-size: 32px; letter-spacing: .011em; line-height: 1.2858; }
 
-.sc-design .group-title .title { margin-top: 22px; font-size: 140px; line-height: 1; }
+.sc-design .group-title .title { margin-top: 22px; font-size: 180px; line-height: 1; }
 
-.sc-design .group-title .desc { max-width: 50%; margin-left: 50%; margin-top: 80px; font-size: 24px; line-height: 1.43; color: #1d1d1f; letter-spacing: .009em; }
+.sc-design .group-title .desc { max-width: 50%; margin-left: 50%; margin-top: 80px; font-size: 32px; line-height: 1.43; color: #1d1d1f; letter-spacing: .009em; }
+
+.sc-design .group-title .caption-area { position: absolute; top: 50%; left: 50%; height: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 2; }
 
 .sc-design .group-title .caption { position: absolute; font-size: 21px; font-weight: 600; letter-spacing: .011em; color: #86868b; -webkit-transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, transform 0.6s; transition: opacity 0.6s, transform 0.6s, -webkit-transform 0.6s; }
+
+.sc-design .group-title .caption.left { left: 61px; width: 275px; }
+
+.sc-design .group-title .caption.left:nth-child(1) { top: 2%; }
+
+.sc-design .group-title .caption.left:nth-child(2) { top: 17%; }
+
+.sc-design .group-title .caption.right { margin-left: 150px; bottom: 62%; width: 305px; left: 50%; }
+
+.sc-design .group-title .caption.bottom { position: relative; top: 33%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 390px; text-align: center; }
 
 .sc-design .group-title .caption strong { color: #000; }

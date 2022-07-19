@@ -129,27 +129,27 @@
   background: #fff;
   z-index: 2;
   .inner {
-    width: 980px;
+    width: 1228px;
   }
   .group-title {
     .title-area {
       font-weight: 600;
     }
     .theme {
-      font-size: 21px;
+      font-size: 32px;
       letter-spacing: .011em;
       line-height: 1.2858;
     }
     .title {
       margin-top: 22px;
-      font-size: 140px;
+      font-size: 180px;
       line-height: 1;
     }
     .desc {
       max-width: 50%;
       margin-left: 50%;
       margin-top: 80px;
-      font-size: 24px;
+      font-size: 32px;
       line-height: 1.43;
       color: #1d1d1f;
       letter-spacing: .009em;
@@ -160,6 +160,12 @@
       img {}
     }
     .caption-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
     .caption {
       position: absolute;
@@ -168,6 +174,30 @@
       letter-spacing: .011em;
       color: #86868b;
       transition: opacity 0.6s, transform 0.6s;
+      &.left {
+        left: 61px;
+        width: 275px;
+        &:nth-child(1) {
+          top: 2%;
+        }
+        &:nth-child(2) {
+          top: 17%;
+        }
+      }
+      &.right {
+        margin-left: 150px;
+        bottom: 62%;
+        width: 305px;
+        left: 50%;
+      }
+      &.bottom {
+        position: relative;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 390px;
+        text-align: center;
+      }
       strong {
         color: #000;
       }
