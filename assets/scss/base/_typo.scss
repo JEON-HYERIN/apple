@@ -50,3 +50,13 @@ body {
   background-color: #fff;
   word-break: keep-all;
 }
+
+sup, sub {
+	position: relative;
+	font-size: .6em;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
