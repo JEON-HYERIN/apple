@@ -257,6 +257,104 @@ sup { top: -0.5em; }
 
 .sc-video .info-area .info-box p { font-size: 80px; font-weight: 600; line-height: 1.265; color: #fff; opacity: 0.001; -webkit-transition: opacity 0.8s, -webkit-transform 0.8s; transition: opacity 0.8s, -webkit-transform 0.8s; transition: transform 0.8s, opacity 0.8s; transition: transform 0.8s, opacity 0.8s, -webkit-transform 0.8s; }
 
+.sc-service .inner { max-width: 1706px; margin: 0 auto; padding: 0 50px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc-service .service-area { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; color: #1d1d1f; background-color: #f2f2f2; }
+
+.sc-service .service-area + .service-area { margin-top: 20px; }
+
+.sc-service .service-area.engraving { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.sc-service .service-area.music { padding: 58px 0 68px; }
+
+.sc-service .service-area.music .thumb-box { position: relative; left: 23px; }
+
+.sc-service .service-area.music .thumb { position: relative; width: 381px; height: 381px; padding-top: 64px; z-index: 1; }
+
+.sc-service .service-area.music .thumb::before { content: ''; position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 353px; height: 397px; background: url("../images/content/service_music_stack.jpg") no-repeat center; z-index: -1; }
+
+.sc-service .service-area.music .thumb img { display: block; border-radius: 3.5%; background-color: #000f64; -webkit-filter: drop-shadow(0px 4px 18px #000f6477); filter: drop-shadow(0px 4px 18px #000f6477); }
+
+.sc-service .service-area.ar .info-box-wrap { -ms-flex-preferred-size: 58.33333%; flex-basis: 58.33333%; }
+
+.sc-service .service-area.engraving .info-box-wrap { -ms-flex-preferred-size: 33.33333%; flex-basis: 33.33333%; margin-left: 12%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.sc-service .service-area.music .info-box-wrap { -ms-flex-preferred-size: 58.33333%; flex-basis: 58.33333%; }
+
+.sc-service .service-area.ar .info-box { -ms-flex-preferred-size: 50%; flex-basis: 50%; margin-left: 27px; margin-right: 25%; }
+
+.sc-service .service-area.engraving .info-box { margin-top: 0; }
+
+.sc-service .service-area.music .info-box { height: auto; -ms-flex-preferred-size: 58.33333%; flex-basis: 58.33333%; margin-left: 25%; margin-right: auto; }
+
+.sc-service .service-area.ar .ico-logo { width: 55px; height: 62px; background-image: url("../images/content/service_ar_logo.png"); }
+
+.sc-service .service-area.music .ico-logo { width: 107px; height: 26px; background-image: url("../images/content/service_music_logo.svg"); }
+
+.sc-service .service-area.ar .desc { max-width: 83.33333%; margin-top: 16px; font-size: 24px; font-weight: 600; line-height: 1.29167; letter-spacing: .009em; color: #86868b; }
+
+.sc-service .service-area.engraving .desc { margin-top: 0.8em; }
+
+.sc-service .service-area.music .link-buy { display: block; margin-top: 16px; }
+
+.sc-service .thumb-box { -ms-flex-preferred-size: 41.66667%; flex-basis: 41.66667%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc-service .info-box-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+
+.sc-service .info-box { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100%; margin-top: 11px; }
+
+.sc-service .info-box .ico-logo { margin-bottom: 13px; background-repeat: no-repeat; }
+
+.sc-service .info-box .title { font-size: 48px; font-weight: 600; line-height: 1.32; }
+
+.sc-service .info-box .title a:hover { color: #06c; }
+
+.sc-service .info-box .link-buy { font-size: 21px; font-weight: 400; letter-spacing: .011em; color: #06c; }
+
+.sc-service .info-box .link-buy:hover { text-decoration: underline; }
+
+.sc-service .info-box .link-buy .material-icons { font-size: inherit; vertical-align: -4px; }
+
+.sc-service .color-list { display: -webkit-box; display: -ms-flexbox; display: flex; padding-bottom: 16px; margin: 28px 0 24px; }
+
+.sc-service .color-item { margin: 0 10px; }
+
+.sc-service .color-item:nth-child(1) { margin-left: 4px; }
+
+.sc-service .btn-color { display: block; position: relative; width: 30px; height: 30px; color: #1d1d1f; }
+
+.sc-service .btn-color::before { content: ''; display: block; position: absolute; left: -4px; right: -4px; top: -4px; bottom: -4px; border-radius: 50%; }
+
+.sc-service .btn-color:hover::before, .sc-service .btn-color.active::before { border: 1px solid #d2d2d7; }
+
+.sc-service .btn-color.silver .color-box { background-color: #f5f4f0; }
+
+.sc-service .btn-color.silver .color-box::after { background-color: #d2d3d4; }
+
+.sc-service .btn-color.gray .color-box { background-color: #3c3d3a; }
+
+.sc-service .btn-color.gray .color-box::after { background-color: #595759; }
+
+.sc-service .btn-color.blue .color-box { background-color: #2f506c; }
+
+.sc-service .btn-color.blue .color-box::after { background-color: #91a6bb; }
+
+.sc-service .btn-color.pink .color-box { background-color: #e4544d; }
+
+.sc-service .btn-color.pink .color-box::after { background-color: #d8a097; }
+
+.sc-service .btn-color.green .color-box { background-color: #e7ece3; }
+
+.sc-service .btn-color.green .color-box::after { background-color: #afbfab; }
+
+.sc-service .btn-color .color-box { display: block; border-radius: 50%; width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden; }
+
+.sc-service .btn-color .color-box::after { content: ''; display: block; height: 50%; width: 100%; position: absolute; bottom: 0; }
+
+.sc-service .btn-color .title { position: absolute; bottom: -26px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 12px; font-weight: 400; line-height: 1.41667; white-space: nowrap; display: none; }
+
+.sc-service .btn-color.active .title { display: block; }
+
 .sc-design { position: relative; padding-top: 152px; background: #fff; z-index: 2; }
 
 .sc-design .inner { width: 1228px; }

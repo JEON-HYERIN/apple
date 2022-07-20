@@ -129,6 +129,298 @@
   }
 }
 
+// sc-service
+.sc-service {
+  .inner {
+    max-width: 1706px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+
+  .service-area {
+    position: relative;
+    display: flex;
+    color: #1d1d1f;
+    background-color: #f2f2f2;
+
+    &+.service-area {
+      margin-top: 20px;
+    }
+
+    &.engraving {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &.music {
+      padding: 58px 0 68px;
+    }
+
+    &.music .thumb-box {
+      position: relative;
+      left: 23px;
+    }
+
+    &.music .thumb {
+      position: relative;
+      width: 381px;
+      height: 381px;
+      padding-top: 64px;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 353px;
+        height: 397px;
+        background: url("../images/content/service_music_stack.jpg") no-repeat center;
+        z-index: -1;
+      }
+
+      img {
+        display: block;
+        border-radius: 3.5%;
+        background-color: #000f64;
+        filter: drop-shadow(0px 4px 18px #000f6477);
+      }
+    }
+
+    &.ar .info-box-wrap {
+      flex-basis: 58.33333%;
+    }
+
+    &.engraving .info-box-wrap {
+      flex-basis: 33.33333%;
+      margin-left: 12%;
+      justify-content: center;
+    }
+
+    &.music .info-box-wrap {
+      flex-basis: 58.33333%;
+    }
+
+    &.ar .info-box {
+      flex-basis: 50%;
+      margin-left: 27px;
+      margin-right: 25%;
+    }
+
+    &.engraving .info-box {
+      margin-top: 0;
+    }
+
+    &.music .info-box {
+      height: auto;
+      flex-basis: 58.33333%;
+      margin-left: 25%;
+      margin-right: auto;
+    }
+
+    &.ar .ico-logo {
+      width: 55px;
+      height: 62px;
+      background-image: url("../images/content/service_ar_logo.png");
+    }
+
+    &.music .ico-logo {
+      width: 107px;
+      height: 26px;
+      background-image: url("../images/content/service_music_logo.svg");
+    }
+
+    &.ar .desc {
+      max-width: 83.33333%;
+      margin-top: 16px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.29167;
+      letter-spacing: .009em;
+      color: #86868b;
+    }
+
+    &.engraving .desc {
+      margin-top: 0.8em;
+    }
+
+    &.music .link-buy {
+      display: block;
+      margin-top: 16px;
+    }
+  }
+
+  .thumb-box {
+    flex-basis: 41.66667%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+
+  .info-box-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 11px;
+
+    .ico-logo {
+      margin-bottom: 13px;
+      background-repeat: no-repeat;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.32;
+
+      a {
+        &:hover {
+          color: #06c;
+        }
+      }
+    }
+
+    .link-buy {
+      font-size: 21px;
+      font-weight: 400;
+      letter-spacing: .011em;
+      color: #06c;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .material-icons {
+        font-size: inherit;
+        vertical-align: -4px;
+      }
+    }
+  }
+
+  .color-list {
+    display: flex;
+    padding-bottom: 16px;
+    margin: 28px 0 24px;
+  }
+
+  .color-item {
+    margin: 0 10px;
+
+    &:nth-child(1) {
+      margin-left: 4px;
+    }
+  }
+
+  .btn-color {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: #1d1d1f;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      top: -4px;
+      bottom: -4px;
+      border-radius: 50%;
+    }
+
+    &:hover::before,
+    &.active::before {
+      border: 1px solid #d2d2d7;
+    }
+
+    &.silver .color-box {
+      background-color: #f5f4f0;
+
+      &::after {
+        background-color: #d2d3d4;
+      }
+    }
+
+    &.gray .color-box {
+      background-color: #3c3d3a;
+
+      &::after {
+        background-color: #595759;
+      }
+    }
+
+    &.blue .color-box {
+      background-color: #2f506c;
+
+      &::after {
+        background-color: #91a6bb;
+      }
+    }
+
+    &.pink .color-box {
+      background-color: #e4544d;
+
+      &::after {
+        background-color: #d8a097;
+      }
+    }
+
+    &.green .color-box {
+      background-color: #e7ece3;
+
+      &::after {
+        background-color: #afbfab;
+      }
+    }
+
+    .color-box {
+      display: block;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .title {
+      position: absolute;
+      bottom: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.41667;
+      white-space: nowrap;
+      display: none;
+    }
+
+    &.active .title {
+      display: block;
+    }
+  }
+}
+
 // sc-design
 .sc-design {
   position: relative;
@@ -235,7 +527,6 @@
 
   .inner {
     max-width: 940px;
-
   }
 
   .sc-title {
