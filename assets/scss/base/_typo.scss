@@ -1,54 +1,64 @@
 /* font - SF Pro KR */
 @font-face {
-	font-family:'SF Pro KR';
+	font-family: 'SF Pro KR';
 	font-style: normal;
-  src: url('../fonts/SFProKRDisplay_regular.woff2');
+	src: url('../fonts/SFProKRDisplay_regular.woff2');
 }
+
 @font-face {
-	font-family:'SF Pro KR';
+	font-family: 'SF Pro KR';
 	font-style: normal;
 	font-weight: 500;
-  src: url('../fonts/SFProKRDisplay_medium.woff2');
+	src: url('../fonts/SFProKRDisplay_medium.woff2');
 }
+
 @font-face {
-	font-family:'SF Pro KR';
+	font-family: 'SF Pro KR';
 	font-style: normal;
 	font-weight: 600;
-  src: url('../fonts/SFProKRDisplay_semibold.woff2');
+	src: url('../fonts/SFProKRDisplay_semibold.woff2');
 }
+
 @font-face {
-	font-family:'SF Pro KR';
+	font-family: 'SF Pro KR';
 	font-style: normal;
 	font-weight: 700;
-  src: url('../fonts/SFProKRDisplay_bold.woff2');
+	src: url('../fonts/SFProKRDisplay_bold.woff2');
 }
+
 /* font - SF Pro Text */
 @font-face {
-	font-family:'SF Pro Text';
+	font-family: 'SF Pro Text';
 	font-style: normal;
 	font-weight: 600;
-  src: url('../fonts/sf-pro-text_semibold.woff2');
+	src: url('../fonts/sf-pro-text_semibold.woff2');
 }
+
 /* font - SF Pro Icons */
 @font-face {
-	font-family:'SF Pro Icons';
+	font-family: 'SF Pro Icons';
 	font-style: normal;
 	font-weight: 400;
-  src: url('../fonts/sf-pro-icons_regular.woff2');
+	src: url('../fonts/sf-pro-icons_regular.woff2');
 }
 
 html {
-  font-size: 106.25%;
+	font-size: 106.25%;
 }
 
 body {
-  font-family: "SF Pro KR","SF Pro Text","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 17px;
-  line-height: 1.58824;
-  font-weight: 400;
-  color: #1d1d1f;
-  background-color: #fff;
-  word-break: keep-all;
+	font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 1.58824;
+	font-weight: 400;
+	color: #1d1d1f;
+	background-color: #fff;
+	word-break: keep-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	color: #1d1d1f;
 }
 
 sup, sub {
@@ -59,4 +69,47 @@ sup, sub {
 
 sup {
 	top: -0.5em;
+
+	a {
+		&:hover {
+			color: #06c;
+		}
+	}
+}
+
+.sc-theme {
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: .011em;
+	line-height: 1.2858;
+}
+
+.sc-title {
+	margin-top: 22px;
+	font-size: 180px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.sc-desc {
+	max-width: 50%;
+	margin-left: 50%;
+	margin-top: 80px;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.43;
+	color: #1d1d1f;
+	letter-spacing: .009em;
+}
+
+.sc-sub-title {
+	font-size: 96px;
+	font-weight: 600;
+	line-height: 1.265;
+	text-align: center;
+}
+
+strong.title {
+	font-weight: 600;
+	color: #1d1d1f;
 }
