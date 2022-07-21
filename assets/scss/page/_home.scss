@@ -205,6 +205,139 @@
   }
 }
 
+// sc-sound
+.sc-sound {
+  position: relative;
+  padding-top: 182px;
+  color: #6e6e73;
+  background: #000;
+
+  .group-title {
+    color: #fff;
+
+    .sc-theme,
+    .sc-title,
+    .sc-desc {
+      color: inherit;
+    }
+  }
+
+  .group-sticky {
+    position: relative;
+    display: flex;
+    margin-top: 172px;
+
+    .thumb-area-wrap {
+      display: flex;
+      justify-content: flex-end;
+      flex-basis: 58.33333%;
+      max-width: 58.33333%;
+    }
+
+    .thumb-area {
+      position: relative;
+      flex-shrink: 0;
+      width: 1212px;
+      height: 1492px;
+    }
+
+    .thumb-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      flex-shrink: 0;
+    }
+
+    .info-area {
+      position: relative;
+      flex-basis: 33.33333%;
+      max-width: 33.33333%;
+      margin-left: 8.33333%;
+      font-size: 24px;
+      line-height: 1.43;
+      letter-spacing: .009em;
+
+      .title {
+        color: #fff;
+      }
+
+      .desc {
+        @include common-desc;
+        color: inherit;
+      }
+    }
+
+    .info-box {
+      position: absolute;
+      top: 850px;
+      width: 87.5%;
+    }
+  }
+
+  .group-audio {
+    margin-top: 182px;
+
+    .desc {
+      @include common-desc;
+      color: inherit;
+    }
+
+    .title-area {
+      .sc-sub-title {
+        max-width: 75%;
+        color: #fff;
+        text-align: left;
+      }
+
+      .desc {
+        max-width: 66.66667%;
+        margin-top: 66px;
+      }
+    }
+
+    .audio-view {
+      position: relative;
+      margin-top: 182px;
+      z-index: 1;
+
+      .inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1706px;
+        padding: 0 50px;
+        box-sizing: border-box;
+      }
+    }
+
+    .audio-area {
+      &.column-left {
+        width: 62.6401%;
+
+        .desc {
+          max-width: 83.33333%;
+        }
+      }
+
+      &.column-right {
+        width: 35.49191%;
+      }
+
+      .thumb-box {}
+
+      .info-box {}
+
+      .desc {
+        margin-top: 4.5%;
+
+        em {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
 // sc-experience
 .sc-experience {
   padding-top: 182px;
@@ -225,6 +358,7 @@
 
     .thumb-area-wrap {
       flex-basis: 75%;
+      max-width: 75%;
       display: flex;
     }
 
@@ -265,6 +399,7 @@
     .info-area {
       @include common-desc;
       flex-basis: 25%;
+      max-width: 25%;
       padding-top: 430px;
     }
   }
@@ -281,6 +416,7 @@
 
     .function-box {
       flex-basis: 25%;
+      max-width: 25%;
     }
   }
 
@@ -392,20 +528,24 @@
 
     &.ar .info-box-wrap {
       flex-basis: 58.33333%;
+      max-width: 58.33333%;
     }
 
     &.engraving .info-box-wrap {
       flex-basis: 33.33333%;
+      max-width: 33.33333%;
       margin-left: 12%;
       justify-content: center;
     }
 
     &.music .info-box-wrap {
       flex-basis: 58.33333%;
+      max-width: 58.33333%;
     }
 
     &.ar .info-box {
       flex-basis: 50%;
+      max-width: 50%;
       margin-left: 27px;
       margin-right: 25%;
     }
@@ -417,6 +557,7 @@
     &.music .info-box {
       height: auto;
       flex-basis: 58.33333%;
+      max-width: 58.33333%;
       margin-left: 25%;
       margin-right: auto;
     }
@@ -455,6 +596,7 @@
 
   .thumb-box {
     flex-basis: 41.66667%;
+    max-width: 41.66667%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -480,7 +622,6 @@
 
     .title {
       font-size: 48px;
-      font-weight: 600;
       line-height: 1.32;
     }
 
@@ -630,8 +771,6 @@
   .sc-title {
     font-size: 64px;
     line-height: 1;
-    font-weight: 600;
-    color: #1d1d1f;
   }
 
   .model-list {
@@ -703,10 +842,8 @@
 
     .title {
       font-size: 24px;
-      font-weight: 600;
       letter-spacing: .009em;
       line-height: 1.29167;
-      color: #1d1d1f;
     }
 
     .version {
@@ -837,6 +974,26 @@
       font-size: 42px;
       line-height: 1.04762;
       font-weight: 500;
+    }
+  }
+
+  .link-compare {
+    display: block;
+    margin-top: 40px;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.52381;
+    letter-spacing: .011em;
+    color: #06c;
+    text-align: center;
+
+    &:hover span {
+      text-decoration: underline;
+    }
+
+    .material-icons {
+      font-size: inherit;
+      vertical-align: -3px;
     }
   }
 }
