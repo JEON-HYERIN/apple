@@ -205,8 +205,8 @@
   }
 }
 
-// sc-sound
-.sc-sound {
+// sc-audio
+.sc-audio {
   position: relative;
   padding-top: 182px;
   color: #6e6e73;
@@ -274,13 +274,20 @@
     }
   }
 
-  .group-audio {
-    margin-top: 182px;
-
+  .group-quality,
+  .group-gradient {
     .desc {
       @include common-desc;
       color: inherit;
+
+      em {
+        color: #fff;
+      }
     }
+  }
+
+  .group-quality {
+    margin-top: 182px;
 
     .title-area {
       .sc-sub-title {
@@ -307,32 +314,95 @@
         padding: 0 50px;
         box-sizing: border-box;
       }
-    }
-
-    .audio-area {
-      &.column-left {
-        width: 62.6401%;
-
-        .desc {
-          max-width: 83.33333%;
-        }
-      }
-
-      &.column-right {
-        width: 35.49191%;
-      }
-
-      .thumb-box {}
-
-      .info-box {}
 
       .desc {
         margin-top: 4.5%;
-
-        em {
-          color: #fff;
-        }
       }
+    }
+
+    .column-left {
+      width: 62.6401%;
+
+      .info-box {
+        max-width: 83.33333%;
+        margin: 0 auto;
+      }
+    }
+
+    .column-right {
+      width: 35.49191%;
+    }
+  }
+
+  .group-gradient {
+    position: relative;
+    height: 1977px;
+    margin-top: -254px;
+
+    .audio-view {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at bottom, #3C3E3B 0%, black 45%);
+      background-size: 8000px 1977px;
+      background-position: center top;
+    }
+
+    .inner {
+      max-width: 1227px;
+      height: 100%;
+    }
+
+    .thumb-box {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .mask {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1227px;
+      height: 1179px;
+      -webkit-mask-image: url("../images/content/audio_quality_spatial_figure_mask.png");
+      -webkit-mask-size: cover;
+    }
+
+    .rings {
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      transition: opacity 300ms ease-out;
+
+      &.front {
+        top: 1102px;
+        opacity: 0.2;
+      }
+
+      &.back {
+        top: 684px;
+      }
+    }
+
+    .info-area {
+      position: absolute;
+      left: 0;
+      bottom: 180px;
+      width: 100%;
+
+      .common-inner {}
+    }
+
+    .info-box {
+      max-width: 41.66667%;
+
+      .desc {}
     }
   }
 }
