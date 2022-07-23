@@ -10,6 +10,9 @@
   <!-- GOOGLE ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet">
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -110,8 +113,8 @@
       <!-- design -->
       <section class="sc-design">
         <h2 class="blind">AirPods Max 디자인</h2>
-        <div class="common-inner">
-          <div class="group-title">
+        <div class="group-title">
+          <div class="common-inner">
             <div class="title-box">
               <span class="sc-theme">디자인</span>
               <h3 class="sc-title">과감하리만치 독창적인 구조.</h3>
@@ -153,8 +156,160 @@
               </div>
             </div>
           </div>
-          <div class="group-quality"></div>
-          <div class="group-color"></div>
+        </div>
+        <div class="group-quality">
+          <div class="inner1">
+            <div class="design-view">
+              <div class="column-left">
+                <div class="design-area">
+                  <div class="thumb-box">
+                    <img src="./assets/images/content/design_comfort.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="design-area">
+                  <div class="thumb-box">
+                    <img src="./assets/images/content/design_mesh.jpg" alt="" />
+                  </div>
+                  <div class="info-box">
+                    <p class="desc">
+                      <em>특수 제작된 메시 직물</em>이 이어 쿠션을 감싸고 있어, 음악 청취 시 부드러운 베개 같은 포근함을 느낄 수 있습니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="design-area">
+                  <div class="thumb-box">
+                    <img src="./assets/images/content/design_foam.jpg" alt="" />
+                  </div>
+                  <div class="info-box">
+                    <p class="desc">
+                      음향학적 공법으로 설계된 메모리 폼 소재의 <em>이어 쿠션</em>이 몰입감 만점의 차폐 공간을 생성하고 이를 통해 놀라운 사운드를 경험하게 해줍니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-crown">
+          <div class="inner">
+            <div class="info-box">
+              <p class="desc">
+                <em>Digital Crown</em>으로 정밀한 음량 조절, 트랙 전환, 전화 통화, Siri 호출까지 모두 가능합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="group-gallery">
+          <div class="inner1">
+            <div class="title-box">
+              <h3 class="sc-sub-title">
+                5가지 색상.<br />
+                단조로움을 거부한다.
+              </h3>
+              <!-- <ul class="color-list">
+                <li class="color-item">
+                  <a href="#" class="btn-color silver active">
+                    <span class="color-box"></span>
+                    <span class="blind">실버</span>
+                  </a>
+                </li>
+                <li class="color-item">
+                  <a href="#" class="btn-color gray">
+                    <span class="color-box"></span>
+                    <span class="blind">스페이스 그레이</span>
+                  </a>
+                </li>
+                <li class="color-item">
+                  <a href="#" class="btn-color blue">
+                    <span class="color-box"></span>
+                    <span class="blind">스카이 블루</span>
+                  </a>
+                </li>
+                <li class="color-item">
+                  <a href="#" class="btn-color pink">
+                    <span class="color-box"></span>
+                    <span class="blind">그린</span>
+                  </a>
+                </li>
+                <li class="color-item">
+                  <a href="#" class="btn-color green">
+                    <span class="color-box"></span>
+                    <span class="blind">실버</span>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+            <div class="gallery-area">
+              <div class="gallery-swiper">
+                <ul class="gallery-list swiper-wrapper">
+                  <li class="gallery-item swiper-slide">
+                    <div class="column-left">
+                      <div class="thumb-box gallery-thumb">
+                        <img src="./assets/images/content/design_colors_silver_front.jpg" alt="실버색 Airpods Max를 보여주는 이미지" />
+                      </div>
+                    </div>
+                    <div class="column-right">
+                      <div class="thumb-box gallery-side-thumb">
+                        <img src="./assets/images/content/design_colors_silver_side.jpg" alt="실버 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="gallery-item swiper-slide">
+                    <div class="column-left">
+                      <div class="thumb-box gallery-thumb">
+                        <img src="./assets/images/content/design_colors_gray_front.jpg" alt="스페이스 그레이색 Airpods Max를 보여주는 이미지" />
+                      </div>
+                    </div>
+                    <div class="column-right">
+                      <div class="thumb-box gallery-side-thumb">
+                        <img src="./assets/images/content/design_colors_gray_side.jpg" alt="스페이스 그레이 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="gallery-item swiper-slide">
+                    <div class="column-left">
+                      <div class="thumb-box gallery-thumb">
+                        <img src="./assets/images/content/design_colors_blue_front.jpg" alt="스카이 블루색 Airpods Max를 보여주는 이미지" />
+                      </div>
+                    </div>
+                    <div class="column-right">
+                      <div class="thumb-box gallery-side-thumb">
+                        <img src="./assets/images/content/design_colors_blue_side.jpg" alt="스카이 블루 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="gallery-item swiper-slide">
+                    <div class="column-left">
+                      <div class="thumb-box gallery-thumb">
+                        <img src="./assets/images/content/design_colors_pink_front.jpg" alt="핑크색 Airpods Max를 보여주는 이미지" />
+                      </div>
+
+                    </div>
+                    <div class="column-right">
+                      <div class="thumb-box gallery-side-thumb">
+                        <img src="./assets/images/content/design_colors_pink_side.jpg" alt="핑크 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="gallery-item swiper-slide">
+                    <div class="column-left">
+                      <div class="thumb-box gallery-thumb">
+                        <img src="./assets/images/content/design_colors_green_front.jpg" alt="그린색 Airpods Max를 보여주는 이미지" />
+                      </div>
+                    </div>
+                    <div class="column-right">
+                      <div class="thumb-box gallery-side-thumb">
+                        <img src="./assets/images/content/design_colors_green_side.jpg" alt="그린 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="swiper-pagination"></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- audio -->
@@ -222,31 +377,35 @@
               </p>
             </div>
           </div>
-          <div class="audio-view">
-            <div class="inner">
-              <div class="audio-area column-left">
-                <div class="thumb-box">
-                  <img src="./assets/images/content/audio_quality.jpg" alt="" />
-                </div>
-                <div class="info-box">
-                  <p class="desc">
-                    이어 쿠션이 완성하는 맞춤형 핏과 어쿠스틱 차폐 공간에 맞춰 <em>적응형 EQ</em> 기술이 사운드를 조정합니다. 내향 마이크가 당신의 귀에 들리는 소리를 측정한 다음, 음악의
-                    주파수를 조절해 풍부하면서도 일관된 청취 경험을 선사해주기 때문에 음 하나하나를 원음에 충실한 사운드로 감상할 수 있죠.
-                  </p>
+          <div class="inner1">
+            <div class="audio-view">
+              <div class="column-left">
+                <div class="audio-area">
+                  <div class="thumb-box">
+                    <img src="./assets/images/content/audio_quality.jpg" alt="" />
+                  </div>
+                  <div class="info-box">
+                    <p class="desc">
+                      이어 쿠션이 완성하는 맞춤형 핏과 어쿠스틱 차폐 공간에 맞춰 <em>적응형 EQ</em> 기술이 사운드를 조정합니다. 내향 마이크가 당신의 귀에 들리는 소리를 측정한 다음, 음악의
+                      주파수를 조절해 풍부하면서도 일관된 청취 경험을 선사해주기 때문에 음 하나하나를 원음에 충실한 사운드로 감상할 수 있죠.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="audio-area column-right">
-                <div class="thumb-box">
-                  <img src="./assets/images/content/audio_quality_noise_cancellation.jpg"
-                    alt="소음 제어 버튼을 자세히 보여주는 이미지" />
-                </div>
-                <div class="info-box">
-                  <p class="desc">
-                    업계 최고 수준의 <em>액티브 노이즈 캔슬링</em> 기능이 외부 소음을 그에 상응하는 안티 노이즈로 상쇄하기 때문에 오롯이 콘텐츠의 사운드에만 집중할 수 있습니다.
-                  </p>
-                  <p class="desc">
-                    소음 제어 버튼을 누르면 <em>주변음 허용 모드</em>로 전환됩니다. 외부 소리가 그대로 흘러 들어오기 때문에 주변 소리를 자연스럽게 들을 수 있고, 심지어는 대화도 가능하죠.
-                  </p>
+              <div class="column-right">
+                <div class="audio-area">
+                  <div class="thumb-box">
+                    <img src="./assets/images/content/audio_quality_noise_cancellation.jpg"
+                      alt="소음 제어 버튼을 자세히 보여주는 이미지" />
+                  </div>
+                  <div class="info-box">
+                    <p class="desc">
+                      업계 최고 수준의 <em>액티브 노이즈 캔슬링</em> 기능이 외부 소음을 그에 상응하는 안티 노이즈로 상쇄하기 때문에 오롯이 콘텐츠의 사운드에만 집중할 수 있습니다.
+                    </p>
+                    <p class="desc">
+                      소음 제어 버튼을 누르면 <em>주변음 허용 모드</em>로 전환됩니다. 외부 소리가 그대로 흘러 들어오기 때문에 주변 소리를 자연스럽게 들을 수 있고, 심지어는 대화도 가능하죠.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -42,4 +42,12 @@ div[class*="inner"] {
 
 .common-inner {
   max-width: 1228px;
+  
+  // max-width: 980px;
+}
+
+.inner1 {
+  max-width: 1706px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }

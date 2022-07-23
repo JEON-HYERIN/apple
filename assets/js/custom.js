@@ -1,4 +1,9 @@
 $(function(){
+  // a태그 기본동작 방지
+  $(document).on('click', 'a[href="#"]', function(e) {
+    e.preventDefault();
+  });
+
   // sc-video play
   const video = $('.sc-video video').get(0);
 
@@ -12,10 +17,21 @@ $(function(){
     }
   });
 
-  // sc-service color-box 
-  $('.sc-service .btn-color').click(function(e){
+  // color tab 
+  $('.color-list .btn-color').click(function(e){
     e.preventDefault();
-    $('.sc-service .btn-color').removeClass('active');
+    $('.color-list .btn-color').removeClass('active');
     $(this).addClass('active');
+  });
+
+  // swiper
+  new Swiper('.sc-design .gallery-swiper', {
+    // autoplay: true,
+    loop: true,
+
+    pagination: {
+      el: '.sc-design .swiper-pagination',
+      clickable: true,
+    },
   });
 });
