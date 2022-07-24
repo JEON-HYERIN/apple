@@ -12,11 +12,12 @@
   line-height: 40px;
   text-align: center;
   background-color: rgba(0, 0, 0, .8);
-  color: #fff;
+  color: $color-white;
   font-size: 16px;
   z-index: 100;
   transition: .3s;
 }
+
 #skip-nav:focus {
   top: 0;
 }
@@ -30,7 +31,8 @@
   clip: rect(0 0 0 0);
 }
 
-i[class^="ico-"], i[class*="ico-"] {
+i[class^="ico-"],
+i[class*="ico-"] {
   display: inline-block;
   vertical-align: top;
 }
@@ -42,8 +44,6 @@ div[class*="inner"] {
 
 .common-inner {
   max-width: 1228px;
-  
-  // max-width: 980px;
 }
 
 .inner1 {

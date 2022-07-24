@@ -15,7 +15,7 @@
     height: 52px;
     min-width: 1024px;
     margin-top: 44px;
-    font-size: 12px;
+    font-size: $font-micro;
     z-index: 10;
 
     &::before {
@@ -40,8 +40,8 @@
     .logo {
       a {
         display: block;
-        color: #000;
-        font-size: 21px;
+        color: $color-black;
+        font-size: $font-regular;
         font-weight: 600;
         line-height: 1.14286;
         letter-spacing: -0.5px;
@@ -66,7 +66,7 @@
       line-height: 22px;
 
       &:hover {
-        color: #06c;
+        color: $color-anchor;
       }
 
       &.buy {
@@ -75,8 +75,8 @@
         letter-spacing: -.01em;
         min-width: 23px;
         padding: 4px 11px;
-        font-size: 12px;
-        color: #fff;
+        font-size: $font-micro;
+        color: $color-white;
         text-align: center;
         border-radius: 980px;
         background: #0071e3;
@@ -132,8 +132,8 @@
     display: block;
     max-width: 136px;
     padding: 0 8px;
-    font-size: 12px;
-    color: #fff;
+    font-size: $font-micro;
+    color: $color-white;
     opacity: .8;
     transition: opacity .3s;
     height: 100%;

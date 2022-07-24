@@ -51,15 +51,15 @@ body {
 	font-size: 17px;
 	line-height: 1.58824;
 	font-weight: 400;
-	color: #1d1d1f;
-	background-color: #fff;
+	color: $color-light-black;
+	background-color: $color-white;
 	word-break: keep-all;
 }
 
 h1, h2, h3, h4, h5, h6,
 strong {
 	font-weight: 600;
-	color: #1d1d1f;
+	color: $color-light-black;
 }
 
 sup, sub {
@@ -73,21 +73,16 @@ sup {
 
 	a {
 		&:hover {
-			color: #06c;
+			color: $color-anchor;
 		}
 	}
 }
 
 .sc-theme {
-	font-size: 32px;
+	font-size: $font-large;
 	font-weight: 600;
 	letter-spacing: .002em;
 	line-height: 1.2858;
-
-		// font-size: 21px;
-    // line-height: 1.2858;
-		// font-weight: 600;
-		// letter-spacing: .011em;
 }
 
 .sc-title {
@@ -95,32 +90,17 @@ sup {
 	font-size: 180px;
 	font-weight: 600;
 	line-height: 1;
-
-	// margin-top: 22px;
-	// font-size: 140px;
-	// line-height: 1;
-	// font-weight: 600;
-	// letter-spacing: -.008em;
 }
 
 .sc-desc {
 	max-width: 50%;
 	margin-left: 50%;
 	margin-top: 80px;
-	font-size: 32px;
+	font-size: $font-large;
 	font-weight: 600;
 	line-height: 1.43;
-	color: #1d1d1f;
+	color: $color-light-black;
 	letter-spacing: .002em;
-
-	// max-width: 50%;
-	// margin-left: 50%;
-	// margin-top: 60px;
-	// font-size: 24px;
-	// line-height: 1.29167;
-	// font-weight: 600;
-	// letter-spacing: .009em;
-	// color: #1d1d1f;
 }
 
 .sc-sub-title {
@@ -128,9 +108,4 @@ sup {
 	font-weight: 600;
 	line-height: 1.265;
 	text-align: center;
-
-	// font-size: 80px;
-	// line-height: 1.05;
-	// font-weight: 600;
-	// letter-spacing: -.015em;
 }

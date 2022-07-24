@@ -3,12 +3,12 @@
   position: relative;
   min-width: 1024px;
   overflow: hidden;
-  font-size: 12px;
+  font-size: $font-micro;
   line-height: 1.33337;
   font-weight: 400;
   letter-spacing: -.01em;
-  background: #f5f5f7;
-  color: #6e6e73;
+  background: $color-dark-white;
+  color: $color-footer-gray;
   z-index: 1;
 
   .inner {
@@ -17,11 +17,11 @@
   }
 
   .service-area {
-    font-size: 14px;
+    font-size: $font-small;
     font-weight: 400;
     line-height: 1.57143;
     padding-bottom: 56px;
-    border-bottom: 1px solid #d2d2d7;
+    border-bottom: 1px solid $color-border;
   }
 
   .service-list {
@@ -29,7 +29,7 @@
     justify-content: center;
     text-align: center;
     font-size: 1em;
-    color: #1d1d1f;
+    color: $color-light-black;
   }
 
   .service-item {
@@ -82,7 +82,7 @@
     .more {
       display: block;
       margin-top: 0.8em;
-      color: #06c;
+      color: $color-anchor;
     }
 
     &:hover .more {
@@ -96,13 +96,13 @@
   }
 
   .guide-area {
-    border-bottom: 1px solid #d2d2d7;
+    border-bottom: 1px solid $color-border;
     padding: 17px 0 11px;
-    font-size: 12px;
+    font-size: $font-micro;
     line-height: 1.33337;
     letter-spacing: 0em;
     font-weight: 400;
-    color: #6e6e73;
+    color: $color-footer-gray;
 
     .remark {
       padding-bottom: 0.8em;
@@ -127,7 +127,7 @@
       padding: 17px 0;
       position: relative;
       z-index: 1;
-      color: #424245;
+      color: $color-footer-dark-gray;
 
       &::after {
         content: '';
@@ -182,7 +182,7 @@
 
   .nav-list-wrap {
     display: flex;
-    font-size: 12px;
+    font-size: $font-micro;
     line-height: 1.33337;
     font-weight: 400;
   }
@@ -198,7 +198,7 @@
 
     .title {
       display: block;
-      font-size: 12px;
+      font-size: $font-micro;
       line-height: 1.33337;
       letter-spacing: -.01em;
       margin-right: 20px;
@@ -214,7 +214,7 @@
   }
 
   .link-nav {
-    color: #424245;
+    color: $color-footer-dark-gray;
 
     &:hover {
       text-decoration: underline;
@@ -227,12 +227,12 @@
     .group-flex1 {
       margin-bottom: 7px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #d2d2d7;
+      border-bottom: 1px solid $color-border;
     }
 
     .remark {
       a {
-        color: #06c;
+        color: $color-anchor;
 
         &:hover {
           text-decoration: underline;
@@ -271,7 +271,7 @@
 
     .corp-item {
       float: left;
-      border-right: 1px solid #d2d2d7;
+      border-right: 1px solid $color-border;
       margin-right: 7px;
       padding-right: 10px;
       margin-top: 5px;
@@ -286,7 +286,7 @@
 
     .link-corp {
       display: block;
-      color: #424245;
+      color: $color-footer-dark-gray;
 
       &:hover {
         text-decoration: underline;

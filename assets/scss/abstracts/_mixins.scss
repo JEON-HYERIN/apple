@@ -5,3 +5,16 @@
   letter-spacing: .009em;
   color: #86868b;
 }
+
+@mixin quality-flex {
+  .quality-view {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column-left {
+    width: 62.6401%;
+  }
+  .column-right {
+    width: 35.49191%;
+  }
+}
