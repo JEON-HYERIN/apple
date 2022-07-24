@@ -1,7 +1,10 @@
 @mixin common-desc {
-  font-size: 24px;
+  font: {
+    size: 24px;
+    weight: 600;
+  }
+
   line-height: 1.43;
-  font-weight: 600;
   letter-spacing: .009em;
   color: #86868b;
 }
@@ -11,9 +14,11 @@
     display: flex;
     justify-content: space-between;
   }
+
   .column-left {
     width: 62.6401%;
   }
+
   .column-right {
     width: 35.49191%;
   }
