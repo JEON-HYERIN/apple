@@ -6,7 +6,7 @@ $(function(){
 
   // video play
   const video = $('.sc-video video').get(0);
-  const designVideo = $('.sc-design .crown-video').get(0);
+  const crownVideo = $('.sc-design .crown-video').get(0);
 
   $('.sc-video .video-control').click(function(e){
     e.preventDefault();
@@ -21,9 +21,9 @@ $(function(){
     e.preventDefault();
     $(this).toggleClass('pause');
     if ($(this).hasClass('pause')){
-      designVideo.play();
+      crownVideo.play();
     } else{
-      designVideo.pause();
+      crownVideo.pause();
     }
   });
 
