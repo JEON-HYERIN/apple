@@ -4,16 +4,26 @@ $(function(){
     e.preventDefault();
   });
 
-  // sc-video play
+  // video play
   const video = $('.sc-video video').get(0);
+  const designVideo = $('.sc-design .crown-video').get(0);
 
-  $('.sc-video .btn-control').click(function(e){
+  $('.sc-video .video-control').click(function(e){
     e.preventDefault();
     $(this).toggleClass('pause');
     if ($(this).hasClass('pause')){
       video.play();
     } else{
       video.pause();
+    }
+  });
+  $('.sc-design .group-crown .video-control').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('pause');
+    if ($(this).hasClass('pause')){
+      designVideo.play();
+    } else{
+      designVideo.pause();
     }
   });
 

@@ -1,0 +1,22 @@
+.video-control {
+  position: absolute;
+  bottom: 36px;
+  right: 42px;
+  z-index: 2;
+
+  .ico-control {
+    width: 34px;
+    height: 34px;
+
+    background: {
+      repeat: no-repeat;
+      image: url("../images/icon/ico_play.svg");
+    }
+  }
+
+  &.pause {
+    .ico-control {
+      background-image: url("../images/icon/ico_pause.svg");
+    }
+  }
+}

@@ -8,16 +8,14 @@
   <!-- FAVICON -->
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   <!-- GOOGLE ICONS -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-  
+
   <div id="wrapper">
     <a href="#main" id="skip-nav">본문 바로가기</a>
     <!-- HEADER -->
@@ -89,12 +87,12 @@
         <h2 class="blind">비디오 재생 영역</h2>
         <div class="video-area">
           <video src="./assets/video/video_large.mp4" autoplay playsinline muted loop></video>
+          <a href="#" class="video-control pause">
+            <i class="ico-control">
+              <span class="blind">자동재생 또는 정지</span>
+            </i>
+          </a>
         </div>
-        <a href="#" class="btn-control pause">
-          <i class="ico-control">
-            <span class="blind">자동재생 또는 정지</span>
-          </i>
-        </a>
         <ul class="info-list">
           <li class="info-item active">하이파이 오디오.</li>
           <li class="info-item">액티브 노이즈 캔슬링과 주변음&nbsp; 허용 모드.</li>
@@ -201,8 +199,20 @@
           </div>
         </div>
         <div class="group-crown">
-          <div class="inner">
-            <div class="crown-info">
+          <div class="crown-view">
+            <div class="video-area">
+              <video class="crown-video" src="./assets/video/video_crown.mp4" autoplay playsinline muted loop
+                poster="./assets/images/content/design_crown_startframe.jpg"></video>
+              <a href="#" class="video-control pause">
+                <i class="ico-control">
+                  <span class="blind">자동재생 또는 정지</span>
+                </i>
+              </a>
+            </div>
+            <div class="thumb-box">
+              <img src="./assets/images/content/design_crown_body.png" alt="스카이 블루색 Digital Crown을 자세히 보여주는 이미지" />
+            </div>
+            <div class="info-box">
               <p class="desc">
                 <em>Digital Crown</em>으로 정밀한 음량 조절, 트랙 전환, 전화 통화, Siri 호출까지 모두 가능합니다.
               </p>
@@ -1049,6 +1059,10 @@
 
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script defer src="./assets/js/custom.js"></script>
 </body>
+
 </html>

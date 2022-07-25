@@ -94,29 +94,6 @@
     }
   }
 
-  .btn-control {
-    position: absolute;
-    bottom: 36px;
-    right: 42px;
-    z-index: 1;
-
-    .ico-control {
-      width: 34px;
-      height: 34px;
-
-      background: {
-        repeat: no-repeat;
-        image: url("../images/icon/ico_play.svg");
-      }
-    }
-
-    &.pause {
-      .ico-control {
-        background-image: url("../images/icon/ico_pause.svg");
-      }
-    }
-  }
-
   .info-list {
     position: absolute;
     left: 50%;
@@ -284,16 +261,37 @@
   }
 
   .group-crown {
-    background: url("../images/content/design_crown_fallback.jpg") no-repeat center/cover;
+    position: relative;
 
-    .inner {
+    .video-area {
       position: relative;
-      margin-top: 150px;
+      margin-top: 176px;
       height: 0;
       padding-bottom: 51.17892%;
     }
 
-    .crown-info {
+    .crown-video {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .thumb-box {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .info-box {
       position: absolute;
       bottom: 0;
       top: 43%;
