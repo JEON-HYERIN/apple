@@ -625,7 +625,7 @@ sup a:hover { color: #06c; }
 
 .sc-model .model-item { width: calc((100% - 102px) / 4); }
 
-.sc-model .model-area { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #d2d2d7; }
+.sc-model .model-area { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #d2d2d7; min-height: 445px; }
 
 .sc-model .model-area:nth-child(1) { padding-bottom: 25px; margin-bottom: 53px; }
 
