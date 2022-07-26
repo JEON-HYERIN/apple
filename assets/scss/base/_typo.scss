@@ -96,10 +96,13 @@ sup {
 
 	letter-spacing: .002em;
 	line-height: 1.2858;
+
+	& + .sc-title {
+		margin-top: 10px;
+	}
 }
 
 .sc-title {
-	margin-top: 10px;
 
 	font: {
 		size: 180px;

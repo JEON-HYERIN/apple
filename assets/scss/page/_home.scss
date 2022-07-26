@@ -252,6 +252,42 @@
         color: $color-light-black;
       }
     }
+
+    .thumb-box {
+      position: relative;
+      overflow: hidden;
+
+      &.comfort {
+        max-width: 1006px;
+        padding-bottom: 147.45527%;
+      }
+
+      &.mesh {
+        max-width: 570px;
+
+        &::after {
+          content: '';
+          display: block;
+          padding-bottom: 132.63158%;
+        }
+      }
+
+      &.foam {
+        max-width: 570px;
+
+        &::after {
+          content: '';
+          display: block;
+          padding-bottom: 130.87719%;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 
   .quality-area {
@@ -506,7 +542,12 @@
     .info-box {
       position: absolute;
       top: 850px;
+      opacity: 0;
       width: 87.5%;
+
+      &.show {
+        opacity: 1;
+      }
     }
 
     .title {
@@ -555,6 +596,33 @@
 
       .desc {
         margin-top: 4.5%;
+      }
+    }
+
+    .thumb-box {
+      position: relative;
+      overflow: hidden;
+
+      &.quality {
+        max-width: 1006px;
+        padding-bottom: 147.45527%;
+      }
+
+      &.noise-cancellation {
+        max-width: 570px;
+
+        &::after {
+          content: '';
+          display: block;
+          padding-bottom: 126.14035%;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
       }
     }
 
@@ -702,9 +770,20 @@
 
     .info-area {
       @include common-desc;
+      position: relative;
       flex-basis: 25%;
       max-width: 25%;
+    }
+
+    .info-box {
+      position: absolute;
+      top: 0;
+      opacity: 0;
       padding-top: 430px;
+
+      &.show {
+        opacity: 1;
+      }
     }
   }
 
@@ -739,6 +818,10 @@
           color: $color-light-black;
         }
       }
+    }
+
+    .sc-sub-title {
+      line-height: 1.05;
     }
 
     .thumb-box {
@@ -1114,7 +1197,7 @@
 
     &:nth-child(1) {
       padding-bottom: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 53px;
     }
 
     &:nth-child(2) {
