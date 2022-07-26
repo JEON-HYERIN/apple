@@ -651,7 +651,7 @@ sup a:hover { color: #06c; }
 
 .sc-model .model-area .link-buy { display: inline-block; font-size: 12px; font-weight: 400; padding-left: 11px; padding-right: 11px; padding-top: 4px; padding-bottom: 4px; line-height: 1.33337; min-width: 23px; border-radius: 980px; background: #0071e3; color: #fff; text-align: center; }
 
-.sc-model .model-area .link-more { display: inline-block; margin-top: 0.4em; font-size: 14px; font-weight: 400; color: #06c; }
+.sc-model .model-area .link-more { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 400; color: #06c; }
 
 .sc-model .model-area .link-more:hover { text-decoration: underline; }
 
