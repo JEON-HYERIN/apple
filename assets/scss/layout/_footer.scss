@@ -137,7 +137,7 @@
   }
 
   .group-nav {
-    .now-list {
+    .channel-list {
       padding: 17px 0;
       position: relative;
       z-index: 1;
@@ -150,7 +150,7 @@
       }
     }
 
-    .now-item {
+    .channel-item {
       margin-right: 7px;
       float: left;
       padding: 3px 4px 3px 0;
@@ -163,7 +163,7 @@
         padding-top: 0;
       }
 
-      &+.now-item::before {
+      &+.channel-item::before {
         content: '';
         display: inline-block;
         width: 8px;
@@ -184,7 +184,7 @@
         vertical-align: middle;
       }
 
-      .link-now {
+      .link-channel {
         display: inline-block;
       }
 
