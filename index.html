@@ -97,12 +97,15 @@
             </i>
           </a>
         </div>
-        <ul class="info-list">
-          <li class="info-item active">하이파이 오디오.</li>
-          <li class="info-item">액티브 노이즈 캔슬링과 주변음&nbsp; 허용 모드.</li>
-          <li class="info-item">극장에 온 듯한<br /> 서라운드 사운드의 공간 음향.</li>
-          <li class="info-item">매끈한 디자인. 뛰어난 착용감.</li>
-        </ul>
+        <span class="video-dim"></span>
+        <div class="inner1">
+          <ul class="info-list">
+            <li class="info-item active">하이파이 오디오.</li>
+            <li class="info-item">액티브 노이즈 캔슬링과 주변음&nbsp; 허용 모드.</li>
+            <li class="info-item">극장에 온 듯한<br /> 서라운드 사운드의 공간 음향.</li>
+            <li class="info-item">매끈한 디자인. 뛰어난 착용감.</li>
+          </ul>
+        </div>
       </section>
       <!-- design -->
       <section class="sc-design">
@@ -221,10 +224,13 @@
         </div>
         <div class="group-gallery">
           <div class="inner2">
-            <h3 class="sc-sub-title">
-              5가지 색상.<br />
-              단조로움을 거부한다.
-            </h3>
+            <div class="title-area">
+              <h3 class="sc-sub-title">
+                5가지 색상.<br />
+                단조로움을 거부한다.
+              </h3>
+              <div class="btn-color-wrap"></div>
+            </div>
             <div class="gallery-area">
               <div class="column-left">
                 <div class="gallery-swiper1 swiper">
@@ -283,7 +289,6 @@
                   </ul>
                 </div>
               </div>
-              <a href="#" class="swiper-pagination"></a>
             </div>
           </div>
         </div>
@@ -532,9 +537,29 @@
         <div class="inner">
           <div class="service-view">
             <div class="service-area ar">
-              <div class="thumb-box">
-                <img src="./assets/images/content/service_ar_silver.jpg"
-                  alt="iPhone에서 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+              <div class="thumb-list-wrap gallery-swiper">
+                <ul class="thumb-list swiper-wrapper">
+                  <li id="silver" class="thumb-item swiper-slide active">
+                    <img src="./assets/images/content/service_ar_silver.jpg"
+                    alt="iPhone에서 실버 색상의 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+                  </li>
+                  <li id="gray" class="thumb-item swiper-slide">
+                    <img src="./assets/images/content/service_ar_gray.jpg"
+                      alt="iPhone에서 스페이스 그레이 색상의 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+                  </li>
+                  <li id="blue" class="thumb-item swiper-slide">
+                    <img src="./assets/images/content/service_ar_blue.jpg"
+                      alt="iPhone에서 스카이 블루 색상의 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+                  </li>
+                  <li id="pink" class="thumb-item swiper-slide">
+                    <img src="./assets/images/content/service_ar_pink.jpg"
+                      alt="iPhone에서 핑크 색상의 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+                  </li>
+                  <li id="green" class="thumb-item swiper-slide">
+                    <img src="./assets/images/content/service_ar_green.jpg"
+                      alt="iPhone에서 그린 색상의 AirPods Max를 증강 현실 화면으로 보여주는 이미지" />
+                  </li>
+                </ul>
               </div>
               <div class="info-box-wrap">
                 <div class="info-box">
@@ -543,38 +568,7 @@
                   <p class="desc">
                     iPhone 또는 iPad에서 이 페이지를 Safari로 열어보세요.
                   </p>
-                  <ul class="color-list">
-                    <li class="color-item">
-                      <a href="#" class="btn-color silver active">
-                        <span class="color-box"></span>
-                        <span class="title">실버</span>
-                      </a>
-                    </li>
-                    <li class="color-item">
-                      <a href="#" class="btn-color gray">
-                        <span class="color-box"></span>
-                        <span class="title">스페이스 그레이</span>
-                      </a>
-                    </li>
-                    <li class="color-item">
-                      <a href="#" class="btn-color blue">
-                        <span class="color-box"></span>
-                        <span class="title">스카이 블루</span>
-                      </a>
-                    </li>
-                    <li class="color-item">
-                      <a href="#" class="btn-color pink">
-                        <span class="color-box"></span>
-                        <span class="title">핑크</span>
-                      </a>
-                    </li>
-                    <li class="color-item">
-                      <a href="#" class="btn-color green">
-                        <span class="color-box"></span>
-                        <span class="title">그린</span>
-                      </a>
-                    </li>
-                  </ul>
+                  <div class="btn-color-wrap"></div>
                 </div>
               </div>
             </div>

@@ -22,15 +22,30 @@ $(function () {
       $('.sc-video .video-area').removeClass('sticky');
     }
   })
-  
-  // 전체영역 페이드 주면서 나오게 함
-  const infoListFade = gsap.fromTo('.sc-video .info-list', {
-    opacity: 0
-  }, {
-    opacity: 0.99
-  })
 
-  // 트리거 분할
+    // 전체영역 페이드 주면서 나오게 함
+    const DimFade = gsap.fromTo('.sc-video .video-dim', {
+      opacity: 0.999
+    }, {
+      opacity: 0.001
+    });
+  
+    const infoListFade = gsap.fromTo('.sc-video .info-list', {
+      opacity: 0.001
+    }, {
+      opacity: 0.999
+    });
+  
+    // 트리거 분할
+    ScrollTrigger.create({
+      trigger: '.sc-video .video-dim',
+      start: 'top 125%',
+      end: '100% 50%',
+      // markers: true,
+      scrub: 1,
+      animation: DimFade
+    })
+  
   ScrollTrigger.create({
     trigger: '.sc-video .info-list',
     start: 'top center',
@@ -43,11 +58,11 @@ $(function () {
   $('.sc-video .info-item').each(function(index, el){
     ScrollTrigger.create({
       trigger: el,
-      start: 'top 60%',
-      end: 'bottom 30%',
+      start: 'top 65%',
+      end: 'bottom 50%',
       // markers: true,
       // scrub: 1,
-      toggleClass: {targets: el, className: "active"}
+      toggleClass: {targets: el, className: "show"}
     })
   });
 
@@ -119,34 +134,53 @@ $(function () {
   });
 
   // color tab 
-  $('.color-list .btn-color').click(function (e) {
+  $('.sc-service .btn-color-wrap .btn-color').click(function (e) {
     e.preventDefault();
-    $('.color-list .btn-color').removeClass('active');
+    // const color = $(this).attr('href');
+    // $(color).addClass('active').siblings().removeClass('active');
+    $('.sc-service .btn-color-wrap .btn-color').removeClass('active');
     $(this).addClass('active');
   });
 
  // swiper
   const colorSlide1 = new Swiper('.sc-design .gallery-swiper1', {
-  autoplay: {
-    delay: 5000,
-  },
+  autoplay: true,
   speed: 1500,
   loop: true,
   pagination: {
-    el: '.sc-design .swiper-pagination',
+    el: '.sc-design .btn-color-wrap',
     clickable: true,
+    renderBullet: function (index, className) {
+      return `<a class="btn-color ${className}"</a>`;
+    }
   },
 });
 
   const colorSlide2= new Swiper('.sc-design .gallery-swiper2', {
     effect:'fade',
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: true,
+    speed: 1500,
     loop: true,
     pagination: {
-      el: '.sc-design .swiper-pagination',
+      el: '.sc-design .btn-color-wrap',
       clickable: true,
+      renderBullet: function (index, className) {
+        return `<a class="btn-color ${className}"</a>`;
+      }
+    },
+  });
+
+  const colorBullet = ['실버', '스페이스 그레이', '스카이 블루', '핑크' , '그린'];
+  const colorSlide3= new Swiper('.sc-service .gallery-swiper', {
+    effect:'fade',
+    speed: 600,
+    loop: true,
+    pagination: {
+      el: '.sc-service .btn-color-wrap',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<a class="btn-color ${className}"><span class="title">${colorBullet[index]}</span></a>`;
+      }
     },
   });
 
