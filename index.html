@@ -15,9 +15,16 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-
+  <div id="skip-nav">
+    <a href="#intro">AirPods Max 소개 바로가기</a>
+    <a href="#video">비디오 재생 영역 바로가기</a>
+    <a href="#design">디자인 영역 바로가기</a>
+    <a href="#audio">음질 영역 바로가기</a>
+    <a href="#experience">매혹적인 경험 바로가기</a>
+    <a href="#service">더 많은 서비스 바로가기</a>
+    <a href="#model">당신에게 알맞은 AirPods 바로가기</a>
+  </div>
   <div id="wrapper">
-    <a href="#main" id="skip-nav">본문 바로가기</a>
     <!-- HEADER -->
     <header id="header">
       <div class="inner1">
@@ -40,8 +47,8 @@
           </ul>
         </nav>
         <div class="util-area">
-          <a href="#" class="link-util search"><span class="blind">검색</span></a>
-          <a href="#" class="link-util cart"><span class="blind">장바구니</span></a>
+          <a href="#" class="btn-util search" role="button"><span class="blind">검색</span></a>
+          <a href="#" class="btn-util cart" role="button"><span class="blind">장바구니</span></a>
         </div>
       </div>
     </header>
@@ -59,9 +66,9 @@
       </div>
     </div>
     <!-- MAIN -->
-    <main id="main" role="main">
+    <main id="main">
       <!-- intro -->
-      <section class="sc-intro">
+      <section id="intro" class="sc-intro">
         <h2 class="blind">AirPods Max 소개</h2>
         <div class="group-title">
           <div class="inner">
@@ -87,11 +94,11 @@
         </div>
       </section>
       <!-- video -->
-      <section class="sc-video">
+      <section id="video" class="sc-video">
         <h2 class="blind">비디오 재생 영역</h2>
         <div class="video-area">
           <video src="./assets/video/video_large.mp4" autoplay playsinline muted loop></video>
-          <a href="#" class="video-control pause">
+          <a href="#" class="video-control pause" role="button">
             <i class="ico-control">
               <span class="blind">자동재생 정지</span>
             </i>
@@ -108,7 +115,7 @@
         </div>
       </section>
       <!-- design -->
-      <section class="sc-design">
+      <section id="design" class="sc-design">
         <div class="group-title">
           <div class="common-inner">
             <h2 class="sc-theme">디자인</h2>
@@ -206,7 +213,7 @@
             <div class="video-area">
               <video class="crown-video" src="./assets/video/video_crown.mp4" autoplay playsinline muted loop
                 poster="./assets/images/content/design_crown_startframe.jpg"></video>
-              <a href="#" class="video-control pause">
+              <a href="#" class="video-control pause" role="button">
                 <i class="ico-control">
                   <span class="blind">자동재생 정지</span>
                 </i>
@@ -229,34 +236,29 @@
                 5가지 색상.<br />
                 단조로움을 거부한다.
               </h3>
-              <div class="btn-color-wrap"></div>
+              <div class="btn-color-wrap" role="tablist"></div>
             </div>
             <div class="gallery-area">
               <div class="column-left">
                 <div class="gallery-swiper1 swiper">
                   <ul class="gallery-list swiper-wrapper">
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_silver_front.jpg"
-                      alt="실버색 Airpods Max를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_silver_front.jpg" alt="실버색 Airpods Max를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_gray_front.jpg"
-                      alt="스페이스 그레이색 Airpods Max를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_gray_front.jpg" alt="스페이스 그레이색 Airpods Max를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_blue_front.jpg"
-                      alt="스카이 블루색 Airpods Max를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_blue_front.jpg" alt="스카이 블루색 Airpods Max를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_pink_front.jpg"
-                      alt="핑크색 Airpods Max를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_pink_front.jpg" alt="핑크색 Airpods Max를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_green_front.jpg"
-                      alt="그린색 Airpods Max를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_green_front.jpg" alt="그린색 Airpods Max를 보여주는 이미지" />
                     </li>
                   </ul>
-                  <a href="#" class="slide-control pause">
+                  <a href="#" class="slide-control pause" role="button">
                     <i class="ico-control">
                       <span class="blind">자동재생 정지</span>
                     </i>
@@ -267,24 +269,19 @@
                 <div class="gallery-swiper2 swiper">
                   <ul class="gallery-list swiper-wrapper">
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_silver_side.jpg"
-                      alt="실버 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_silver_side.jpg" alt="실버 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_gray_side.jpg"
-                      alt="스페이스 그레이 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_gray_side.jpg" alt="스페이스 그레이 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_blue_side.jpg"
-                      alt="스카이 블루 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_blue_side.jpg" alt="스카이 블루 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_pink_side.jpg"
-                      alt="핑크 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_pink_side.jpg" alt="핑크 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
                     </li>
                     <li class="gallery-item swiper-slide">
-                      <img src="./assets/images/content/design_colors_green_side.jpg"
-                      alt="그린 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
+                      <img src="./assets/images/content/design_colors_green_side.jpg" alt="그린 색상 캐노피의 통기성이 뛰어난 니트 메시 소재를 보여주는 이미지" />
                     </li>
                   </ul>
                 </div>
@@ -294,7 +291,7 @@
         </div>
       </section>
       <!-- audio -->
-      <section class="sc-audio">
+      <section id="audio" class="sc-audio">
         <div class="common-inner">
           <div class="group-title">
             <h2 class="sc-theme">음질</h2>
@@ -323,21 +320,21 @@
                 </div>
               </div>
               <div class="info-area">
-                <div class="info-box show">
+                <div class="info-box txt1">
                   <strong class="title">몰입감 넘치는 사운드</strong>
                   <p class="desc">
                     원치 않는 외부 소음을 차단하기 위해 AirPods&nbsp;Max는 6개의 외향 마이크를 이용해 주변 소음을 감지하고, 2개의 내향 마이크로 당신의 귀에 들리는 사운드까지
                     측정합니다. 또한 빔포밍 마이크가 통화 시 당신의 음성만 잡아내기 때문에 바람이 심하게 부는 날에도 깨끗한 음질로 통화할 수 있습니다.
                   </p>
                 </div>
-                <div class="info-box">
+                <div class="info-box txt2">
                   <strong class="title">모든 디테일을 빠짐없이</strong>
                   <p class="desc">
                     Apple이 직접 설계한 다이내믹 드라이버는 폭넓은 주파수 대역의 소리를 생성합니다. 다시 말해, 사운드 하나하나가 풍부한 디테일을 자랑한다는 의미죠. 덕분에 평소에 즐기던 음악에
                     기존에는 들리지 않았던 질감과 정확성이 더해져 완전히 새로운 느낌으로 다가옵니다.
                   </p>
                 </div>
-                <div class="info-box">
+                <div class="info-box txt3">
                   <strong class="title">왜곡 없는 재생</strong>
                   <p class="desc">
                     고가의 플로어 스탠딩 스피커의 드라이버에나 장착되는 듀얼 네오디뮴 링 마그넷 모터가 전체 음역대에 걸쳐 총고조파 왜곡을 최소화합니다. 덕분에 최대 음량에서도 변함없이 깨끗한
@@ -412,10 +409,8 @@
               <div class="common-inner">
                 <div class="info-box">
                   <p class="desc">
-                    <em>동적 머리 추적 기술로 구현되는 공간 음향</em>을 통해 영화나 동영상을 볼 때 실제 극장에 와 있는 듯한 서라운드 사운드를 즐길 수 있습니다.<sup><a
-                        href="#">1</a></sup>
-                    내장 자이로스코프 및 가속도계를 통해 AirPods Max와 iPhone, iPad, 또는 Apple TV가 머리의 미세한 움직임을 추적하기 때문에, 어느 방향으로 고개를 돌려도
-                    사운드는 정해진 위치에 고정된 채 들려오죠.
+                    <em>동적 머리 추적 기술로 구현되는 공간 음향</em>을 통해 영화나 동영상을 볼 때 실제 극장에 와 있는 듯한 서라운드 사운드를 즐길 수 있습니다.<sup><a href="#">1</a></sup>
+                    내장 자이로스코프 및 가속도계를 통해 AirPods Max와 iPhone, iPad, 또는 Apple TV가 머리의 미세한 움직임을 추적하기 때문에, 어느 방향으로 고개를 돌려도 사운드는 정해진 위치에 고정된 채 들려오죠.
                     <br /><br />
                     게다가 Apple&nbsp;Music에서는 동적 머리 추적 기술로 구현되는 공간 음향을 통해 사운드가 온몸을 휘감는 듯한 3차원 오디오를 만끽할 수 있습니다.
                   </p>
@@ -426,15 +421,13 @@
         </div>
       </section>
       <!-- experience -->
-      <section class="sc-experience">
+      <section id="experience" class="sc-experience">
         <div class="common-inner">
           <div class="group-title">
             <h2 class="sc-theme">매혹적인 경험</h2>
             <h3 class="sc-title">고도의 심플함.</h3>
             <p class="sc-desc">
-              AirPods&nbsp;Max는 AirPods 제품군이 자랑하는 간편하면서 매혹적인 사용성을 그대로 갖추고 있습니다. 설정부터 Siri 명령어까지, 매끄러운 청취 경험을 완성하기 위한
-              여러
-              기능 덕분에 낮부터 밤까지 기기를 넘나들며 당신만의 리듬에 심취할 수 있죠.
+              AirPods&nbsp;Max는 AirPods 제품군이 자랑하는 간편하면서 매혹적인 사용성을 그대로 갖추고 있습니다. 설정부터 Siri 명령어까지, 매끄러운 청취 경험을 완성하기 위한 여러 기능 덕분에 낮부터 밤까지 기기를 넘나들며 당신만의 리듬에 심취할 수 있죠.
             </p>
           </div>
           <div class="group-experience">
@@ -443,8 +436,7 @@
                 <div class="thumb-area">
                   <div class="screen-box">
                     <div class="screen">
-                      <video class="sc-experience-video" src="./assets/video/video_experience.mp4" autoplay playsinline
-                        muted loop></video>
+                      <video class="sc-experience-video" src="./assets/video/video_experience.mp4" autoplay playsinline muted loop></video>
                     </div>
                   </div>
                   <div class="thumb-box">
@@ -456,8 +448,7 @@
                 <div class="info-box show">
                   <strong class="title">설정도 탭 한 번으로</strong>
                   <p class="desc">
-                    AirPods&nbsp;Max는 iPhone 또는 iPad와 즉시 연결됩니다. AirPods&nbsp;Max를 기기 가까이 가져간 다음, 화면에서 ‘연결’을 탭하기만 하면 간단히
-                    페어링할 수 있죠.<sup><a href="#">2</a></sup>
+                    AirPods&nbsp;Max는 iPhone 또는 iPad와 즉시 연결됩니다. AirPods&nbsp;Max를 기기 가까이 가져간 다음, 화면에서 ‘연결’을 탭하기만 하면 간단히 페어링할 수 있죠.<sup><a href="#">2</a></sup>
                   </p>
                 </div>
                 <div class="info-box">
@@ -471,8 +462,7 @@
                 <div class="info-box">
                   <strong class="title">오디오 공유</strong>
                   <p class="desc">
-                    iPhone, iPad, iPod touch의 오디오 스트림을 두 사람이 각자의 AirPods으로 동시에 들을 수 있습니다. 음악을 재생 중인 기기 가까이에 AirPods을 추가로
-                    가져다 대고, 탭 한 번으로 연결할 수 있죠.
+                    iPhone, iPad, iPod touch의 오디오 스트림을 두 사람이 각자의 AirPods으로 동시에 들을 수 있습니다. 음악을 재생 중인 기기 가까이에 AirPods을 추가로 가져다 대고, 탭 한 번으로 연결할 수 있죠.
                     <sup><a href="#">3</a></sup>
                   </p>
                 </div>
@@ -482,24 +472,23 @@
           <div class="group-function">
             <h3 class="sc-sub-title">그 밖의 신기한 기능.</h3>
             <ul class="function-list">
-              <li class="function-item">
+              <li class="function-item txt1">
                 <strong class="title">착용 감지</strong>
                 <p class="desc">
                   AirPods&nbsp;Max는 벗으면 오디오를 일시 중지하고, 쓰면 다시 재생을 시작합니다. 비트 하나라도 놓칠 일이 없죠.
                 </p>
               </li>
-              <li class="function-item">
+              <li class="function-item txt2">
                 <strong class="title">알림 읽어주기</strong>
                 <p class="desc">
                   ‘알림 읽어주기’ 기능을 통해 Siri가 ‘메시지’, ‘전화’, ‘캘린더’, ‘미리 알림’ 등에서 보내는 중요한 알림이 오는 순간 자동으로 읽어주도록 할 수 있습니다<sup><a href="#">4</a></sup>
                   그리고 답장을 보낼 경우도 그냥 Siri에게 부탁만하면 됩니다. 손 하나 까딱할 필요 없이 말이죠.
                 </p>
               </li>
-              <li class="function-item">
+              <li class="function-item txt3">
                 <strong class="title">Siri 항시 대기</strong>
                 <p class="desc">
-                  간단히 “Siri야”라고 부르기만 하면 길 안내, 날씨 확인, 회의 일정 잡기 등을 간편하게 할 수 있습니다. 실행할 수 있는 명령이 더욱 다양해지면서 Siri의 쓰임새 역시 더
-                  다양해졌죠.
+                  간단히 “Siri야”라고 부르기만 하면 길 안내, 날씨 확인, 회의 일정 잡기 등을 간편하게 할 수 있습니다. 실행할 수 있는 명령이 더욱 다양해지면서 Siri의 쓰임새 역시 더 다양해졌죠.
                 </p>
               </li>
             </ul>
@@ -532,7 +521,7 @@
         </div>
       </section>
       <!-- service -->
-      <section class="sc-service">
+      <section id="service" class="sc-service">
         <h2 class="blind">더 많은 서비스</h2>
         <div class="inner">
           <div class="service-view">
@@ -568,14 +557,13 @@
                   <p class="desc">
                     iPhone 또는 iPad에서 이 페이지를 Safari로 열어보세요.
                   </p>
-                  <div class="btn-color-wrap"></div>
+                  <div class="btn-color-wrap" role="tablist"></div>
                 </div>
               </div>
             </div>
             <div class="service-area engraving">
               <div class="thumb-box">
-                <img src="./assets/images/content/service_engraving.jpg"
-                  alt="AirPods Max 이어컵에 이니셜을 각인으로 새긴 모습을 보여주는 이미지" />
+                <img src="./assets/images/content/service_engraving.jpg" alt="AirPods Max 이어컵에 이니셜을 각인으로 새긴 모습을 보여주는 이미지" />
               </div>
               <div class="info-box-wrap">
                 <div class="info-box">
@@ -610,7 +598,7 @@
         </div>
       </section>
       <!-- model -->
-      <section class="sc-model">
+      <section id="model" class="sc-model">
         <div class="inner">
           <h2 class="sc-title">당신에게 알맞은 AirPods은?</h2>
           <ul class="model-list">
@@ -903,7 +891,7 @@
           </ol>
         </div>
         <div class="group-nav">
-          <nav class="channel" role="navigation">
+          <nav class="channel">
             <ul class="channel-list">
               <li class="channel-item home"><a href="#" class="link-channel"><i class="ico-apple"><span
                 class="blind">홈화면으로</span></i></a></li>
@@ -911,7 +899,7 @@
               <li class="channel-item"><a href="#" class="link-channel">AirPods Max</a></li>
             </ul>
           </nav>
-          <div class="nav-list-wrap">
+          <div class="nav-list-wrap" role="navigation">
             <div class="group-column">
               <div class="nav-area">
                 <strong class="title">쇼핑 및 알아보기</strong>

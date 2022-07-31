@@ -49,6 +49,7 @@
     top: 9.3%;
     height: 100%;
     width: 100%;
+    opacity: 0;
     z-index: 1;
 
     img {
@@ -62,6 +63,10 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+
+    img {
+      opacity: 0;
+    }
   }
 
   .intro-info {
@@ -213,8 +218,6 @@
       &.frame {
         z-index: 2;
       }
-
-      &.cushion {}
     }
 
     .design-inner2 {
@@ -238,7 +241,7 @@
       transition: opacity 0.6s, transform 0.6s;
       opacity: 0;
 
-      &.active {
+      &.show {
         opacity: 1;
       }
 
@@ -534,13 +537,22 @@
     }
 
     .info-box {
-      position: absolute;
-      top: 850px;
+      // position: absolute;
+      position: relative;
+      // top: 850px;
+      // top: 500px;
       opacity: 0;
+      transform: translateY(-300px);
+      transition: transform 0.8s,
+                  opacity 0.8s;
+      transition: .8s;
       width: 87.5%;
+      padding: 50px 0;
 
       &.show {
+        transform: translateY(-150px);
         opacity: 1;
+        z-index: 2;
       }
     }
 
@@ -611,7 +623,7 @@
 
       img {
         object-fit: cover;
-        height: 110%;
+        height: 100%;
       }
     }
 
@@ -651,6 +663,13 @@
         size: 8000px 1977px;
         position: center top;
       }
+
+      opacity: 0;
+      transition: opacity ease-out 900ms;
+
+      &.show {
+        opacity: 1;
+      }
     }
 
     .inner {
@@ -682,17 +701,20 @@
     .rings {
       position: absolute;
       left: 50%;
-      width: 100%;
-      transform: translateX(-50%);
       transition: opacity 300ms ease-out;
+      
+      &.fadeout {
+        opacity: 0.2;
+      }
 
       &.front {
         top: 1102px;
-        opacity: 0.2;
+        margin-left: -476px;
       }
 
       &.back {
         top: 684px;
+        margin-left: -413px;
       }
     }
 

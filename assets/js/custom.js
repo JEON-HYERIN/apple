@@ -54,6 +54,7 @@ $(function () {
     scrub: 1,
     animation: infoListFade
   })
+  
 
   $('.sc-video .info-item').each(function(index, el){
     ScrollTrigger.create({
@@ -62,7 +63,7 @@ $(function () {
       end: 'bottom 50%',
       // markers: true,
       // scrub: 1,
-      toggleClass: {targets: el, className: "show"}
+      toggleClass: {targets: el, className: 'show'}
     })
   });
 
@@ -95,14 +96,14 @@ $(function () {
   .to('.sc-design .thumb-box.frame', {yPercent: -3}, 'motion1+=0.4')
   .to('.sc-design .thumb-box.cushion', {yPercent: 3}, 'motion1+=0.4')
 
-  $('[data-target]').each(function(index, el){
+  $('.sc-design .info-box[data-target]').each(function(index, el){
     ScrollTrigger.create({
       trigger: el,
       start: 'top 60%',
       end: 'bottom -300%',
       // markers: true,
       // scrub: 1,
-      toggleClass: {targets: el, className: "active"}
+      toggleClass: {targets: el, className: 'show'}
     })
   });
   
@@ -136,8 +137,6 @@ $(function () {
   // color tab 
   $('.sc-service .btn-color-wrap .btn-color').click(function (e) {
     e.preventDefault();
-    // const color = $(this).attr('href');
-    // $(color).addClass('active').siblings().removeClass('active');
     $('.sc-service .btn-color-wrap .btn-color').removeClass('active');
     $(this).addClass('active');
   });
@@ -170,6 +169,12 @@ $(function () {
     },
   });
 
+  colorSlide1.on('slideChange', function () {
+    idx = colorSlide1.realIndex;
+
+    colorSlide2.slideToLoop(idx);
+  });
+
   const colorBullet = ['실버', '스페이스 그레이', '스카이 블루', '핑크' , '그린'];
   const colorSlide3= new Swiper('.sc-service .gallery-swiper', {
     effect:'fade',
@@ -184,24 +189,18 @@ $(function () {
     },
   });
 
-colorSlide1.on('slideChange', function () {
-  idx = colorSlide1.realIndex;
-
-  colorSlide2.slideToLoop(idx);
-});
-
-$('.sc-design .slide-control').click(function(e){
-  e.preventDefault();
-  if ($(this).hasClass('pause')) {
-    colorSlide1.autoplay.stop();
-    colorSlide2.autoplay.stop();
-    $(this).removeClass('pause');
-  } else {
-    colorSlide1.autoplay.start();
-    colorSlide2.autoplay.start();
-    $(this).addClass('pause');
-  }
-});
+  $('.sc-design .slide-control').click(function(e){
+    e.preventDefault();
+    if ($(this).hasClass('pause')) {
+      colorSlide1.autoplay.stop();
+      colorSlide2.autoplay.stop();
+      $(this).removeClass('pause');
+    } else {
+      colorSlide1.autoplay.start();
+      colorSlide2.autoplay.start();
+      $(this).addClass('pause');
+    }
+  });
 
   // gsap
   gsap.fromTo('.sc-intro .thumb-box img', {
@@ -239,7 +238,6 @@ $('.sc-design .slide-control').click(function(e){
       start: '0% 100%', 
       end: '100% 50%',
       scrub: 1,
-      // pin: true,
     },
     scaleX: 1,
     scaleY: 1,
@@ -254,12 +252,11 @@ $('.sc-design .slide-control').click(function(e){
       start: '0% 100%', 
       end: '100% 50%',
       scrub: 1,
-      // pin: true,
     },
     scaleX: 1,
     scaleY: 1,
     yPercent: -10,
-    duration: .6
+    duration: 1.5
   });
 
   // gsap.fromTo('.sc-audio .group-quality .column-left .thumb-box img', {
@@ -277,44 +274,174 @@ $('.sc-design .slide-control').click(function(e){
   //   duration: .6
   // });
 
+  // gsap.to('.sc-audio .group-audio', {
+  //   scrollTrigger: {
+  //     trigger: '.sc-audio .group-audio',
+  //     start: 'center center',
+  //     scrub: 5,
+  //     pin: true,
+  //   },
+  //   duration: 4,
+  // });
+
+  // gsap.to('.sc-experience .group-experience', {
+  //   scrollTrigger: {
+  //     trigger: '.sc-experience .group-experience',
+  //     start: '0% 0%',
+  //     scrub: true,
+  //     pin: true,
+  //   },
+  //   duration: 4,
+  // });
+
+
+  // gsap.utils.toArray('.sc-experience .group-experience .info-box').forEach(item => {
+  //   gsap.from(item, {
+  //     opacity: 0,
+  //   }, {
+  //     scrollTrigger: {
+  //       trigger: '.sc-experience .group-experience',
+  //       start: '0% 0%',
+  //       end: '100% 50%',
+  //       toggleClass: {
+  //         targets: item,
+  //         className: 'show'
+  //       },
+  //     },
+  //     opacity: 1,
+  //     scaleX: 1,
+  //     scaleY: 1,
+  //     y: -70,
+  //   });
+  // });
+
   gsap.to('.sc-audio .group-audio', {
     scrollTrigger: {
       trigger: '.sc-audio .group-audio',
-      start: 'center center',
-      scrub: 5,
+      start: 'center 65%',
+      end: '+=100%',
+      scrub: 7,
       pin: true,
+      // markers:true,
     },
     duration: 4,
   });
 
-  gsap.to('.sc-experience .group-experience', {
+  gsap.to('.sc-audio .group-audio .thumb-box',{
+    scrollTrigger:{
+      trigger:'.sc-audio .group-audio',
+      start:'top top',
+      end: '+=100%',
+      // markers:true,
+      scrub:1,
+    },
+    yPercent:-20
+  })
+
+
+  const op = gsap.timeline({
+    scrollTrigger:{
+      trigger:'.sc-audio .group-audio',
+      start:"top top",
+      end: '+=100%',
+      // markers:true,
+      scrub:1,
+    },
+  })
+
+  op.addLabel('m1')
+  .fromTo('.sc-audio .cushion-transparent',{opacity:0},{opacity:1},'m1')
+  .fromTo('.sc-audio .chip',{opacity:0},{opacity:1},'m1+=1')
+  .fromTo('.sc-audio .driver',{opacity:0},{opacity:1},'m1+=2')
+  // op.addLabel('m2')
+  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2')
+  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2+=1')
+  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2+=2')
+
+  $('.sc-audio .info-box').each(function(index,el){
+    ScrollTrigger.create({
+      trigger:el,
+      start:'top 40%',
+      end: '+=100%',
+      // markers:true,
+      scrub:1,
+      toggleClass: {targets: el, className: 'show'}
+    })
+  })
+
+  gsap.fromTo('.sc-audio .sound-view', {
+  }, {
     scrollTrigger: {
-      trigger: '.sc-experience .group-experience',
-      start: '0% 0%',
-      scrub: true,
-      pin: true,
+      trigger: '.sc-audio .sound-view',
+      start: 'top 30%',
+      end: '100% -200%',
+      // markers: true,
+      toggleClass: {
+        targets: '.sc-audio .sound-view',
+        className: 'show'
+      }
     },
-    duration: 4,
   });
 
 
-  gsap.utils.toArray('.sc-experience .group-experience .info-box').forEach(item => {
-    gsap.from(item, {
-      opacity: 0,
-    }, {
+  gsap.fromTo('.sc-audio .group-sound .rings.back', {
+    // scaleX: 0,
+    // scaleY: 0,
+    y: -50,
+    // opacity: 0
+  }, {
       scrollTrigger: {
-        trigger: '.sc-experience .group-experience',
-        start: '0% 0%',
-        end: '100% 50%',
-        toggleClass: {
-          targets: item,
-          className: 'show'
-        },
-      },
-      opacity: 1,
-      scaleX: 1,
-      scaleY: 1,
-      y: -70,
-    });
+      trigger: '.sc-audio .sound-view',
+      start: 'top -60%',
+      end: '100% 50%',
+      scrub: 1,
+      markers: true,
+      toggleClass: {
+        targets: '.sc-audio .group-sound .rings.back',
+        className: 'fadeout'
+      }
+    },
+    // scaleX: 1,
+    // scaleY: 1,
+    y: -10,
+    // opacity: 1,
+    // duration: .5
   });
+
+  gsap.fromTo('.sc-audio .group-sound .rings.front', {
+    y: -30,
+  }, {
+      scrollTrigger: {
+      trigger: '.sc-audio .sound-view',
+      start: 'top -60%',
+      end: '100% 50%',
+      scrub: 1,
+      // markers: true,
+      toggleClass: {
+        targets: '.sc-audio .group-sound .rings.front',
+        className: 'fadeout'
+      }
+    },
+    y: 30,
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger:{
+      trigger:".sc-experience .function-list",
+      start:'top 100%',
+      end: '100% 70%',
+      // markers:true,
+      scrub:1,
+    },
+    // duration: .6
+  })
+  tl.addLabel('t1')
+  .fromTo('.sc-experience .function-item.txt1',{opacity:0, y:50},{opacity:1, y:0},'t1')
+  .fromTo('.sc-experience .function-item.txt2',{opacity:0, y:50},{opacity:1, y:0},'t1+=1')
+  .fromTo('.sc-experience .function-item.txt3',{opacity:0, y:50},{opacity:1, y:0},'t1+=2')
+
 });
+
+
+
+
