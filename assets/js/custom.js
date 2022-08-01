@@ -153,6 +153,7 @@ $(function () {
 
   const colorSlide2= new Swiper('.sc-design .gallery-swiper2', {
     effect:'fade',
+    touchRatio: 0,
     autoplay: true,
     speed: 1500,
     loop: true,
@@ -396,7 +397,7 @@ $(function () {
       trigger:".sc-experience .function-list",
       start:'top -20%',
       end: '100% 100%',
-      markers:true,
+      // markers:true,
       scrub:1,
     },
   })
