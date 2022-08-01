@@ -51,6 +51,10 @@
   .link-service {
     display: block;
 
+    &:hover {
+      color: $color-light-black;
+    }
+
     i[class^="ico"] {
       width: 100%;
       height: 56px;
