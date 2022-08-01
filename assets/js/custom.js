@@ -107,10 +107,6 @@ $(function () {
     })
   });
   
-  // .fromTo('[data-target="text1"]', {opacity: 0},{opacity: 1},'motion1+=0.1')
-  // .fromTo('[data-target="text2"]', {opacity: 0},{opacity: 1},'motion1+=0.2')
-  // .fromTo('[data-target="text3"]', {opacity: 0},{opacity: 1},'motion1+=0.3')
-
   // video play
   const video = $('.sc-video video').get(0);
   const crownVideo = $('.sc-design .crown-video').get(0);
@@ -204,7 +200,7 @@ $(function () {
 
   // gsap
   gsap.fromTo('.sc-intro .thumb-box img', {
-    opacity: 0,
+    opacity: 0.001,
     scaleX: 1.5,
     scaleY: 1.5
   }, {
@@ -219,7 +215,7 @@ $(function () {
     duration: 1.2
   });
   gsap.fromTo('.sc-intro .title-box', {
-    opacity: 0,
+    opacity: 0.001,
   }, {
     scrollTrigger: {
       trigger: '.sc-intro',
@@ -227,8 +223,39 @@ $(function () {
       end: '100% 50%',
     },
     opacity: 0.999,
-    delay: 1,
+    delay: 0.8,
     duration: 1.2
+  });
+
+  gsap.fromTo('.sc-intro .thumb-box', {
+    scaleX: 1,
+    scaleY: 1
+  }, {
+    scrollTrigger: {
+      trigger: '.sc-intro',
+      start: '0% -10%',
+      end: '100% -5%',
+      scrub: 1,
+    },
+    scaleX: 1.2,
+    scaleY: 1.2,
+    // delay: 1,
+    // duration: 1.2
+  });
+  gsap.fromTo('.sc-intro .title-box', {
+    scaleX: 1,
+    scaleY: 1
+  }, {
+    scrollTrigger: {
+      trigger: '.sc-intro',
+      start: '0% -10%',
+      end: '100% -5%',
+      scrub: 1,
+    },
+    scaleX: 0.8,
+    scaleY: 0.8,
+    // delay: 1,
+    // duration: 1.2
   });
 
   gsap.fromTo('.sc-design .thumb-comfort img', {
@@ -246,6 +273,7 @@ $(function () {
   });
   
   gsap.fromTo('.sc-audio .thumb-quality img', {
+    yPercent: 10
   }, {
       scrollTrigger: {
       trigger: '.sc-audio .thumb-quality img',
@@ -258,62 +286,6 @@ $(function () {
     yPercent: -10,
     duration: 1.5
   });
-
-  // gsap.fromTo('.sc-audio .group-quality .column-left .thumb-box img', {
-  // }, {
-  //     scrollTrigger: {
-  //     trigger: '.sc-audio .group-quality .thumb-box img',
-  //     start: '0% 0%', 
-  //     // end: '100% 50%',
-  //     scrub: true,
-  //     pin: true,
-  //   },
-  //   scaleX: 1,
-  //   scaleY: 1,
-  //   y: -84,
-  //   duration: .6
-  // });
-
-  // gsap.to('.sc-audio .group-audio', {
-  //   scrollTrigger: {
-  //     trigger: '.sc-audio .group-audio',
-  //     start: 'center center',
-  //     scrub: 5,
-  //     pin: true,
-  //   },
-  //   duration: 4,
-  // });
-
-  // gsap.to('.sc-experience .group-experience', {
-  //   scrollTrigger: {
-  //     trigger: '.sc-experience .group-experience',
-  //     start: '0% 0%',
-  //     scrub: true,
-  //     pin: true,
-  //   },
-  //   duration: 4,
-  // });
-
-
-  // gsap.utils.toArray('.sc-experience .group-experience .info-box').forEach(item => {
-  //   gsap.from(item, {
-  //     opacity: 0,
-  //   }, {
-  //     scrollTrigger: {
-  //       trigger: '.sc-experience .group-experience',
-  //       start: '0% 0%',
-  //       end: '100% 50%',
-  //       toggleClass: {
-  //         targets: item,
-  //         className: 'show'
-  //       },
-  //     },
-  //     opacity: 1,
-  //     scaleX: 1,
-  //     scaleY: 1,
-  //     y: -70,
-  //   });
-  // });
 
   gsap.to('.sc-audio .group-audio', {
     scrollTrigger: {
@@ -338,7 +310,6 @@ $(function () {
     yPercent:-20
   })
 
-
   const op = gsap.timeline({
     scrollTrigger:{
       trigger:'.sc-audio .group-audio',
@@ -353,10 +324,6 @@ $(function () {
   .fromTo('.sc-audio .cushion-transparent',{opacity:0},{opacity:1},'m1')
   .fromTo('.sc-audio .chip',{opacity:0},{opacity:1},'m1+=1')
   .fromTo('.sc-audio .driver',{opacity:0},{opacity:1},'m1+=2')
-  // op.addLabel('m2')
-  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2')
-  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2+=1')
-  // .fromTo('.sc-audio .group-audio .info-box',{opacity:0},{opacity:1},'m2+=2')
 
   $('.sc-audio .info-box').each(function(index,el){
     ScrollTrigger.create({
@@ -383,7 +350,6 @@ $(function () {
     },
   });
 
-
   gsap.fromTo('.sc-audio .group-sound .rings.back', {
     // scaleX: 0,
     // scaleY: 0,
@@ -395,7 +361,7 @@ $(function () {
       start: 'top -60%',
       end: '100% 50%',
       scrub: 1,
-      markers: true,
+      // markers: true,
       toggleClass: {
         targets: '.sc-audio .group-sound .rings.back',
         className: 'fadeout'
@@ -428,19 +394,57 @@ $(function () {
   const tl = gsap.timeline({
     scrollTrigger:{
       trigger:".sc-experience .function-list",
-      start:'top 100%',
-      end: '100% 70%',
-      // markers:true,
+      start:'top -20%',
+      end: '100% 100%',
+      markers:true,
       scrub:1,
     },
-    // duration: .6
   })
   tl.addLabel('t1')
   .fromTo('.sc-experience .function-item.txt1',{opacity:0, y:50},{opacity:1, y:0},'t1')
   .fromTo('.sc-experience .function-item.txt2',{opacity:0, y:50},{opacity:1, y:0},'t1+=1')
   .fromTo('.sc-experience .function-item.txt3',{opacity:0, y:50},{opacity:1, y:0},'t1+=2')
 
+  gsap.to('.sc-experience .group-experience', {
+    scrollTrigger: {
+      trigger: '.sc-experience .group-experience',
+      start:'top top',
+      // end: '100% 50%',
+      scrub: 7,
+      pin: true,
+      // markers:true,
+    },
+    duration: 4,
+  });
+
+  gsap.to('.sc-experience .group-experience .screen',{
+    scrollTrigger:{
+      trigger:'.sc-experience .group-experience',
+      start:'top top',
+      end: '100% 50%',
+      // markers:true,
+      scrub:1,
+    },
+    // yPercent:-20
+  })
+
+  const op2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:'.sc-experience .group-experience',
+      start:"top top",
+      end: '100% 100%',
+      // markers:true,
+      scrub:1,
+    },
+    duration: 0.03
+  })
+
+  op2.addLabel('m1')
+  .fromTo('.sc-experience .screen.video',{opacity:0},{opacity:1})
+  .fromTo('.sc-experience .screen.switching',{opacity:0},{opacity:1})
+  .fromTo('.sc-experience .screen.sharing',{opacity:0},{opacity:1})
 });
+
 
 
 
