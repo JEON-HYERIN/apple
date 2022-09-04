@@ -59,7 +59,7 @@ div[class*="inner"] { position: relative; margin: 0 auto; }
 /* font - SF Pro Icons */
 @font-face { font-family: 'SF Pro Icons'; font-style: normal; font-weight: 400; src: url("../fonts/sf-pro-icons_regular.woff2"); }
 
-html { font-size: 106.25%; }
+html { font-size: 106.25%; -webkit-text-size-adjust: 100%; }
 
 body { font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-size: 17px; font-weight: 400; line-height: 1.58824; color: #1d1d1f; background-color: #fff; word-break: keep-all; }
 
@@ -369,9 +369,9 @@ sup a:hover { color: #06c; }
 
 .sc-design .group-design .design-inner2 .info-area { position: -webkit-sticky; position: sticky; height: 280px; top: calc(100vh - 280px); }
 
-.sc-design .group-design .info-box { position: absolute; -webkit-transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, transform 0.6s; transition: opacity 0.6s, transform 0.6s, -webkit-transform 0.6s; opacity: 0; }
+.sc-design .group-design .info-box { position: absolute; opacity: 0.001; -webkit-transform: translateY(40px); transform: translateY(40px); -webkit-transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, -webkit-transform 0.6s; transition: opacity 0.6s, transform 0.6s; transition: opacity 0.6s, transform 0.6s, -webkit-transform 0.6s; }
 
-.sc-design .group-design .info-box.show { opacity: 1; }
+.sc-design .group-design .info-box.show { opacity: 0.999; -webkit-transform: translateY(0); transform: translateY(0); }
 
 .sc-design .group-design .info-box.left { left: 61px; width: 275px; }
 
@@ -475,7 +475,7 @@ sup a:hover { color: #06c; }
 
 .sc-audio .group-audio .info-area { position: relative; -ms-flex-preferred-size: 33.33333%; flex-basis: 33.33333%; max-width: 33.33333%; margin-left: 8.33333%; font-size: 24px; line-height: 1.43; letter-spacing: .009em; }
 
-.sc-audio .group-audio .info-box { position: relative; opacity: 0; -webkit-transform: translateY(-300px); transform: translateY(-300px); -webkit-transition: opacity 0.8s, -webkit-transform 0.8s; transition: opacity 0.8s, -webkit-transform 0.8s; transition: transform 0.8s, opacity 0.8s; transition: transform 0.8s, opacity 0.8s, -webkit-transform 0.8s; -webkit-transition: .8s; transition: .8s; width: 87.5%; padding: 50px 0; }
+.sc-audio .group-audio .info-box { position: absolute; top: 850px; width: 87.5%; opacity: 0; }
 
 .sc-audio .group-audio .info-box.show { -webkit-transform: translateY(-150px); transform: translateY(-150px); opacity: 1; z-index: 2; }
 
@@ -553,7 +553,7 @@ sup a:hover { color: #06c; }
 
 .sc-experience .group-experience .screen-box { position: absolute; top: 226.06px; right: 20.58px; width: 293.7px; height: 633.68px; -webkit-mask-size: cover; -webkit-mask-image: url("../images/content/experience_screen_mask.svg"); }
 
-.sc-experience .group-experience .screen { position: absolute; width: 100%; height: 100%; opacity: 0; -webkit-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; }
+.sc-experience .group-experience .screen { position: absolute; width: 100%; height: 100%; opacity: 0; }
 
 .sc-experience .group-experience .screen:first-child { opacity: 1; }
 
@@ -561,9 +561,7 @@ sup a:hover { color: #06c; }
 
 .sc-experience .group-experience .info-area { font-size: 24px; font-weight: 600; line-height: 1.43; letter-spacing: .009em; color: #86868b; position: relative; -ms-flex-preferred-size: 25%; flex-basis: 25%; max-width: 25%; }
 
-.sc-experience .group-experience .info-box { position: absolute; top: 0; opacity: 0; -webkit-transform: translateY(-70px); transform: translateY(-70px); padding-top: 430px; }
-
-.sc-experience .group-experience .info-box.show { opacity: 1; -webkit-transform: translateY(70px); transform: translateY(70px); z-index: 1; }
+.sc-experience .group-experience .info-box { position: absolute; top: 0; opacity: 0; padding-top: 430px; }
 
 .sc-experience .group-function { margin-top: 163px; }
 
