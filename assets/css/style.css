@@ -471,7 +471,9 @@ sup a:hover { color: #06c; }
 
 .sc-audio .group-audio .thumb-area { position: relative; -ms-flex-negative: 0; flex-shrink: 0; width: 1212px; height: 1492px; }
 
-.sc-audio .group-audio .thumb-box { position: absolute; top: 0; left: 0; -ms-flex-negative: 0; flex-shrink: 0; }
+.sc-audio .group-audio .thumb-box { position: absolute; top: 0; left: 0; -ms-flex-negative: 0; flex-shrink: 0; opacity: 0; }
+
+.sc-audio .group-audio .thumb-box.cushion { position: relative; opacity: 1; }
 
 .sc-audio .group-audio .info-area { position: relative; -ms-flex-preferred-size: 33.33333%; flex-basis: 33.33333%; max-width: 33.33333%; margin-left: 8.33333%; font-size: 24px; line-height: 1.43; letter-spacing: .009em; }
 
@@ -555,7 +557,7 @@ sup a:hover { color: #06c; }
 
 .sc-experience .group-experience .screen { position: absolute; width: 100%; height: 100%; opacity: 0; }
 
-.sc-experience .group-experience .screen:first-child { opacity: 1; }
+.sc-experience .group-experience .screen.screen1 { opacity: 1; }
 
 .sc-experience .group-experience .sc-experience-video { position: absolute; top: 0; left: 0; max-width: 100%; }
 
