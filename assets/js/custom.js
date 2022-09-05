@@ -283,16 +283,18 @@ $(function () {
   });
 
   // audio
-  gsap.to('.sc-audio .thumb-quality img', {
+  gsap.fromTo('.sc-audio .thumb-quality img',{
+    y: -150
+  }, {
     scrollTrigger: {
       trigger: '.sc-audio .group-sound',
-      start: 'bottom 40%',
-      end: '+=200%',
+      start: 'bottom 0%',
+      end: 'bottom -350%',
       scrub: 3,
     },
     scaleX: 1,
     scaleY: 1,
-    yPercent: -10,
+    y:0,
   });
 
   gsap.to('.sc-audio .group-audio', {
