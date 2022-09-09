@@ -129,72 +129,72 @@ $(function () {
     })
   });
 
-  
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
 
-canvas.width = 1004;
-canvas.height = 1214;
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
 
-const frameCount = 45;
+  canvas.width = 1004;
+  canvas.height = 1214;
 
-const currentFrame = (idx) => {
-  // return `asset/images/capture/capture${idx.toString()}.jpg`;
+  const frameCount = 45;
 
-  return `https://www.apple.com/105/media/us/airpods-max/2020/996b980b-3131-44f1-af6c-fe72f9b3bfb5/anim/turn/large/large_${idx.toString().padStart(4, '0')}.jpg`;
-}; // 리턴 필수
+  const currentFrame = (idx) => {
+    // return `asset/images/capture/capture${idx.toString()}.jpg`;
 
-const images = [];
-const card = {
-  frame: 0,
-};
+    return `https://www.apple.com/105/media/us/airpods-max/2020/996b980b-3131-44f1-af6c-fe72f9b3bfb5/anim/turn/large/large_${idx.toString().padStart(4, '0')}.jpg`;
+  }; // 리턴 필수
 
-for (let i = 0; i < frameCount; i++) {
-  const img = new Image();
-  img.src = currentFrame(i + 1);
-  images.push(img);
-}
+  const images = [];
+  const card = {
+    frame: 0,
+  };
 
-gsap.to(card, {
-  frame: frameCount - 1,
-  snap: 'frame',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.canvas-area',
-    scrub: 1,
-    start: 'top top',
-    end: 'bottom center',
-    // pin: true,
-    // markers: true
-  },
-  onUpdate: render,
-  // duration: 4,
-});
-// gsap.to('.sc-design .thumb.cushion', {
-//   scrollTrigger: {
-//     trigger: '.canvas-area',
-//     scrub: 0.5,
-//     start: 'top top',
-//     end: 'bottom center',
-//     // pin: true,
-//     // markers: true
-//   },
-//   opacity: 1,
-//   scale:1.1,
-//   y:-100,
-//   delay:2,
-//   duration:1
-// })
-//텍스트 효과넣기 
-// 텍스트
-// scale 이미지(사이즈맞추기 애플보고다시확인)
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i + 1);
+    images.push(img);
+  }
 
-images[0].onload = render;
+  gsap.to(card, {
+    frame: frameCount - 1,
+    snap: 'frame',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.canvas-area',
+      scrub: 1,
+      start: 'top top',
+      end: 'bottom center',
+      // pin: true,
+      // markers: true
+    },
+    onUpdate: render,
+    // duration: 4,
+  });
+  // gsap.to('.sc-design .thumb.cushion', {
+  //   scrollTrigger: {
+  //     trigger: '.canvas-area',
+  //     scrub: 0.5,
+  //     start: 'top top',
+  //     end: 'bottom center',
+  //     // pin: true,
+  //     // markers: true
+  //   },
+  //   opacity: 1,
+  //   scale:1.1,
+  //   y:-100,
+  //   delay:2,
+  //   duration:1
+  // })
+  //텍스트 효과넣기 
+  // 텍스트
+  // scale 이미지(사이즈맞추기 애플보고다시확인)
 
-function render() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(images[card.frame], 0, 0);
-}
+  images[0].onload = render;
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(images[card.frame], 0, 0);
+  }
 
   // 헤드셋 움직이게
   // .sc-design .thumb-area-wrap
@@ -283,7 +283,7 @@ function render() {
   //     className: 'show'
   //   }
   // })
-  
+
   // video play
   const video = $('.sc-video video').get(0);
   const crownVideo = $('.sc-design .crown-video').get(0);
@@ -391,7 +391,7 @@ function render() {
   });
 
   // audio
-  gsap.fromTo('.sc-audio .thumb-quality img',{
+  gsap.fromTo('.sc-audio .thumb-quality img', {
     y: -150
   }, {
     scrollTrigger: {
@@ -402,7 +402,7 @@ function render() {
     },
     scaleX: 1,
     scaleY: 1,
-    y:0,
+    y: 0,
   });
 
   gsap.to('.sc-audio .group-audio', {
@@ -618,15 +618,16 @@ function render() {
     }
   })
   op2.addLabel('label')
-  .to('.sc-experience .group-experience .screen2', {
-    opacity: 1, delay: .5
-  }, 'label+=1')
-  .to('.sc-experience .group-experience .screen3', {
-    opacity: 1
-  }, 'label+=2')
-  .to('.sc-experience .group-experience .screen4', {
-    opacity: 1
-  }, 'label+=3')
+    .to('.sc-experience .group-experience .screen2', {
+      opacity: 1,
+      delay: .5
+    }, 'label+=1')
+    .to('.sc-experience .group-experience .screen3', {
+      opacity: 1
+    }, 'label+=2')
+    .to('.sc-experience .group-experience .screen4', {
+      opacity: 1
+    }, 'label+=3')
   // op2.fromTo('.sc-experience .group-experience .screen', {
   //   opacity: 0
   // }, {
