@@ -129,53 +129,161 @@ $(function () {
     })
   });
 
+  
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = 1004;
+canvas.height = 1214;
+
+const frameCount = 45;
+
+const currentFrame = (idx) => {
+  // return `asset/images/capture/capture${idx.toString()}.jpg`;
+
+  return `https://www.apple.com/105/media/us/airpods-max/2020/996b980b-3131-44f1-af6c-fe72f9b3bfb5/anim/turn/large/large_${idx.toString().padStart(4, '0')}.jpg`;
+}; // 리턴 필수
+
+const images = [];
+const card = {
+  frame: 0,
+};
+
+for (let i = 0; i < frameCount; i++) {
+  const img = new Image();
+  img.src = currentFrame(i + 1);
+  images.push(img);
+}
+
+gsap.to(card, {
+  frame: frameCount - 1,
+  snap: 'frame',
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.canvas-area',
+    scrub: 1,
+    start: 'top top',
+    end: 'bottom center',
+    // pin: true,
+    // markers: true
+  },
+  onUpdate: render,
+  // duration: 4,
+});
+// gsap.to('.sc-design .thumb.cushion', {
+//   scrollTrigger: {
+//     trigger: '.canvas-area',
+//     scrub: 0.5,
+//     start: 'top top',
+//     end: 'bottom center',
+//     // pin: true,
+//     // markers: true
+//   },
+//   opacity: 1,
+//   scale:1.1,
+//   y:-100,
+//   delay:2,
+//   duration:1
+// })
+//텍스트 효과넣기 
+// 텍스트
+// scale 이미지(사이즈맞추기 애플보고다시확인)
+
+images[0].onload = render;
+
+function render() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(images[card.frame], 0, 0);
+}
+
   // 헤드셋 움직이게
   // .sc-design .thumb-area-wrap
   // .sc-design .thumb-box.frame
   // .sc-design .thumb-box.cushion
 
-  gsap.to('.sc-design .thumb-area-wrap', {
-    scrollTrigger: {
-      trigger: '.sc-design .design-inner1',
-      start: 'top 100px',
-      end: 'bottom -10%',
-      // markers: true,
-      scrub: 1,
-    },
-    scale: 1.1
-  })
+  // gsap.to('.sc-design .canvas-area', {
+  //   scrollTrigger: {
+  //     trigger: '.sc-design .design-inner1',
+  //     start: 'top 100px',
+  //     end: 'bottom -10%',
+  //     // markers: true,
+  //     scrub: 1,
+  //   },
+  //   scale: 1.1,
+  //   delay: 2.5
+  // })
+  // gsap.to('.sc-design .canvas-area', {
+  //   scrollTrigger: {
+  //     trigger: '.sc-design .design-inner1',
+  //     start: 'top 100px',
+  //     end: 'bottom -10%',
+  //     // markers: true,
+  //     scrub: 1,
+  //   },
+  //   scale: 1.1,
+  //   delay: 3
+  // })
 
-  const headsetMotion = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.sc-design .design-inner1',
-      start: 'top -30%',
-      end: 'bottom -10%',
-      // markers: true,
-      scrub: 1,
-    },
-  })
-  headsetMotion.addLabel('motion1')
-    .to('.sc-design .thumb-box.frame', {
-      yPercent: -3
-    }, 'motion1+=0.4')
-    .to('.sc-design .thumb-box.cushion', {
-      yPercent: 3
-    }, 'motion1+=0.4')
+  // const headsetMotion = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: '.sc-design .design-inner1',
+  //     start: 'top -30%',
+  //     end: 'bottom -10%',
+  //     // markers: true,
+  //     scrub: 1,
+  //   },
+  // })
+  // headsetMotion.addLabel('motion1')
+  //   .to('.sc-design .thumb.frame', {
+  //     yPercent: -3, opacity: 1, delay: 3
+  //   }, 'motion1+=0.4')
+  //   // .to('.sc-design .thumb.cushion', {
+  //   //   yPercent: 3, opacity: 1, delay: 3
+  //   // }, 'motion1+=0.4')
+  //   .to('.sc-design .thumb.cushion', {
+  //     opacity: 1, delay: 2
+  //   }, 'motion1+=0.4')
+  //   .set('.sc-design canvas', {
+  //     opacity: 0, delay: 2
+  //   }, 'motion1+=0.4')
+  //   .to('.sc-design .canvas-area, .sc-design .group-design', {
+  //     scale: 1.1, delay: 3, duration: 1
+  //   }, 'motion1+=0.6')
 
   $('.sc-design .info-box[data-target]').each(function (index, el) {
-    ScrollTrigger.create({
-      trigger: el,
-      start: 'top 60%',
-      end: 'bottom -300%',
-      // markers: true,
-      // scrub: 1,
-      toggleClass: {
-        targets: el,
-        className: 'show'
-      }
+    gsap.fromTo(el, {
+      opacity: 0.001,
+      y: 40,
+    }, {
+      scrollTrigger: {
+        trigger: '.sc-design .canvas-area',
+        start: 'top top',
+        end: 'bottom center',
+        // markers: true,
+        scrub: 1,
+        // toggleClass: {
+        //   targets: el,
+        //   className: 'show'
+        // }
+      },
+      opacity: 0.999,
+      y: 0,
+      delay: index * 0.2,
+      duration: .6
     })
   });
-
+  // ScrollTrigger.create({
+  //   trigger: el,
+  //   start: 'top 60%',
+  //   end: 'bottom -300%',
+  //   // markers: true,
+  //   // scrub: 1,
+  //   toggleClass: {
+  //     targets: el,
+  //     className: 'show'
+  //   }
+  // })
+  
   // video play
   const video = $('.sc-video video').get(0);
   const crownVideo = $('.sc-design .crown-video').get(0);
