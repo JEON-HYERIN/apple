@@ -207,33 +207,33 @@
       // transform: translate(-50%, -50%);
       // text-align: center;
       // z-index: 2;
+    }
 
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 2;
+
+      // position: absolute;
+      // top: 0;
+      // left: 50%;
+      // transform: translateX(-50%);
+      // object-fit: contain;
+      // opacity: 0.999;
+
+      // position: fixed;
+      // left: 50%;
+      // top: 50%;
+      // max-height: 100vh;
+      // max-width: 100vw;
+      // z-index: 2;
+
+      img {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
-        z-index: 2;
-
-        // position: absolute;
-        // top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
-        // object-fit: contain;
-        // opacity: 0.999;
-
-        // position: fixed;
-        // left: 50%;
-        // top: 50%;
-        // max-height: 100vh;
-        // max-width: 100vw;
-        // z-index: 2;
-
-        img {
-          width: 100%;
-        }
       }
     }
 

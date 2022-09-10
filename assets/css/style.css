@@ -355,9 +355,9 @@ sup a:hover { color: #06c; }
 
 .sc-design .group-design .canvas-area { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.sc-design .group-design .canvas-area canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; -o-object-fit: contain; object-fit: contain; z-index: 2; }
+.sc-design .group-design .canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; -o-object-fit: contain; object-fit: contain; z-index: 2; }
 
-.sc-design .group-design .canvas-area canvas img { width: 100%; }
+.sc-design .group-design .canvas img { width: 100%; }
 
 .sc-design .group-design .thumb { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
 
