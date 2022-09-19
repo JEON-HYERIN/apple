@@ -316,7 +316,10 @@ $(function () {
 
   // swiper
   const colorSlide1 = new Swiper('.sc-design .gallery-swiper1', {
-    autoplay: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     speed: 1500,
     loop: true,
     pagination: {
@@ -331,7 +334,10 @@ $(function () {
   const colorSlide2 = new Swiper('.sc-design .gallery-swiper2', {
     effect: 'fade',
     touchRatio: 0,
-    autoplay: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     speed: 1500,
     loop: true,
     pagination: {
