@@ -143,31 +143,31 @@ sup a:hover { color: #06c; }
 
 #gnb .link-gnb.cart::before { width: 13px; background-size: 13px 44px; background-image: url("../images/typo/gnb_cart.svg"); }
 
-.content-nav { position: -webkit-sticky; position: sticky; top: 0; left: 0; width: 100%; height: 52px; min-width: 1024px; font-size: 12px; z-index: 10; -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); }
+.sticky-nav { position: -webkit-sticky; position: sticky; top: 0; left: 0; width: 100%; height: 52px; min-width: 1024px; font-size: 12px; z-index: 10; -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); }
 
-.content-nav.fixed { -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); background-color: rgba(255, 255, 255, 0.72); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition-property: background-color, backdrop-filter, -webkit-backdrop-filter; }
+.sticky-nav.scrolled { -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); background-color: rgba(255, 255, 255, 0.72); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition-property: background-color, backdrop-filter, -webkit-backdrop-filter; }
 
-.content-nav.fixed::before { width: 100%; }
+.sticky-nav.scrolled::before { width: 100%; }
 
-.content-nav::before { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 980px; height: 1px; background-color: rgba(0, 0, 0, 0.16); z-index: 1; }
+.sticky-nav::before { content: ''; position: absolute; left: 50%; top: 100%; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 980px; height: 1px; background-color: rgba(0, 0, 0, 0.16); z-index: 1; }
 
-.content-nav .inner1 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
+.sticky-nav .inner1 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
 
-.content-nav .logo { display: block; font-size: 21px; font-weight: 600; line-height: 1.14286; letter-spacing: -0.5px; color: #000; }
+.sticky-nav .logo { display: block; font-size: 21px; font-weight: 600; line-height: 1.14286; letter-spacing: -0.5px; color: #000; }
 
-.content-nav .service-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.sticky-nav .service-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.content-nav .service-item + .service-item { margin-left: 24px; }
+.sticky-nav .service-item + .service-item { margin-left: 24px; }
 
-.content-nav .link-service { color: rgba(0, 0, 0, 0.88); display: block; font-size: 1em; line-height: 22px; }
+.sticky-nav .link-service { color: rgba(0, 0, 0, 0.88); display: block; font-size: 1em; line-height: 22px; }
 
-.content-nav .link-service:hover { color: #06c; }
+.sticky-nav .link-service:hover { color: #06c; }
 
-.content-nav .link-service.buy { font-weight: 400; font-size: 12px; line-height: 1.33337; letter-spacing: -.01em; min-width: 23px; padding: 4px 11px; color: #fff; text-align: center; border-radius: 980px; background: #0071e3; }
+.sticky-nav .link-service.buy { font-weight: 400; font-size: 12px; line-height: 1.33337; letter-spacing: -.01em; min-width: 23px; padding: 4px 11px; color: #fff; text-align: center; border-radius: 980px; background: #0071e3; }
 
-.content-nav .link-service.buy:hover { background: #147ce5; }
+.sticky-nav .link-service.buy:hover { background: #147ce5; }
 
-.content-nav .link-service.active { color: rgba(0, 0, 0, 0.56); cursor: default; }
+.sticky-nav .link-service.active { color: rgba(0, 0, 0, 0.56); cursor: default; }
 
 #footer { position: relative; min-width: 1024px; overflow: hidden; font-size: 12px; font-weight: 400; line-height: 1.33337; letter-spacing: -.01em; background: #f5f5f7; color: #6e6e73; z-index: 1; }
 

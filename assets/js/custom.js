@@ -7,13 +7,13 @@ $(function () {
   $(window).scroll(function () {
     const currentScroll = $(this).scrollTop();
 
-    const contentNav = $('.content-nav').offset().top;
+    const stickyNav = $('.sticky-nav').offset().top;
     const scDesign = $('.sc-design').offset().top;
 
-    if (currentScroll >= contentNav) {
-      $('.content-nav').addClass('fixed');
+    if (currentScroll >= stickyNav) {
+      $('.sticky-nav').addClass('scrolled');
     } else {
-      $('.content-nav').removeClass('fixed');
+      $('.sticky-nav').removeClass('scrolled');
     }
 
     if (currentScroll >= scDesign - $(window).height()) {
